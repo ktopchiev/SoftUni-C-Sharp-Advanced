@@ -16,7 +16,10 @@ namespace Reverse_Strings
                 reversedStr.Push(ch.ToString());
             }
 
-            Console.WriteLine(string.Join("", reversedStr));
+            while (reversedStr.Count > 0)
+            {
+                Console.Write(reversedStr.Pop());
+            }
         }
     }
 }
