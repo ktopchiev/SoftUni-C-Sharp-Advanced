@@ -1,0 +1,13 @@
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.exe
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.deps.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.runtimeconfig.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.runtimeconfig.dev.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\bin\Debug\netcoreapp3.1\Supermarket.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.csprojAssemblyReference.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.AssemblyInfoInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.AssemblyInfo.cs
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.csproj.CoreCompileInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Supermarket\obj\Debug\netcoreapp3.1\Supermarket.genruntimeconfig.cache
