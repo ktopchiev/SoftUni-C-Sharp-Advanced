@@ -8,6 +8,11 @@ namespace Matching_Brackets
     {
         static void Main(string[] args)
         {
+            /*We are given an arithmetic expression
+            with brackets (with nesting)
+
+            Extract all sub-expressions in brackets*/
+            
             string input = Console.ReadLine();
 
             Stack<int> stack = new Stack<int>();
