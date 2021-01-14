@@ -8,6 +8,7 @@ namespace Matching_Brackets
     {
         static void Main(string[] args)
         {
+            //PROBLEM: MATCHING BRACKETS
             /*We are given an arithmetic expression
             with brackets (with nesting)
 
