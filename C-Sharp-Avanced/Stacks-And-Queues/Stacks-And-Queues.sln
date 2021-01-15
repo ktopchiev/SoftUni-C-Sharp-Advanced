@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print-Even-Numbers", "Print
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermarket", "Supermarket\Supermarket.csproj", "{2C7A7F43-BFCB-497E-8670-09315CA912AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hot Potato", "Hot Potato\Hot Potato.csproj", "{7BC049A6-F8FB-47BC-973A-946C499425DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{2C7A7F43-BFCB-497E-8670-09315CA912AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C7A7F43-BFCB-497E-8670-09315CA912AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C7A7F43-BFCB-497E-8670-09315CA912AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
