@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermarket", "Supermarket\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hot Potato", "Hot Potato\Hot Potato.csproj", "{7BC049A6-F8FB-47BC-973A-946C499425DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic-Stack-Operations", "Basic-Stack-Operations\Basic-Stack-Operations.csproj", "{58B598C8-4736-45F9-BF06-645FE554DF04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BC049A6-F8FB-47BC-973A-946C499425DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B598C8-4736-45F9-BF06-645FE554DF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B598C8-4736-45F9-BF06-645FE554DF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B598C8-4736-45F9-BF06-645FE554DF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B598C8-4736-45F9-BF06-645FE554DF04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
