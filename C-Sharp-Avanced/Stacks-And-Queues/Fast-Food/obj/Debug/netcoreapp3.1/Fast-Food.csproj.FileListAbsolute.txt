@@ -1,0 +1,13 @@
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.exe
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.deps.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.runtimeconfig.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.runtimeconfig.dev.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\bin\Debug\netcoreapp3.1\Fast-Food.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.csprojAssemblyReference.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.AssemblyInfoInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.AssemblyInfo.cs
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.csproj.CoreCompileInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Stacks-And-Queues\Fast-Food\obj\Debug\netcoreapp3.1\Fast-Food.genruntimeconfig.cache
