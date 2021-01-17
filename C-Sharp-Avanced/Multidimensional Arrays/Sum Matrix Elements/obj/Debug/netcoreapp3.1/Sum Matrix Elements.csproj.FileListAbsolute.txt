@@ -1,0 +1,13 @@
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.exe
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.deps.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.runtimeconfig.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.runtimeconfig.dev.json
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\bin\Debug\netcoreapp3.1\Sum Matrix Elements.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.csprojAssemblyReference.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.AssemblyInfoInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.AssemblyInfo.cs
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.csproj.CoreCompileInputs.cache
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.dll
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.pdb
+D:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\Sum Matrix Elements\obj\Debug\netcoreapp3.1\Sum Matrix Elements.genruntimeconfig.cache
