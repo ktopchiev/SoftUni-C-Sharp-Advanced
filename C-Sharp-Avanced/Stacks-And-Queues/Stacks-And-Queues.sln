@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Boutique", "Fashion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Songs-Queue", "Songs-Queue\Songs-Queue.csproj", "{34D96C89-722A-4F25-98FB-22D16578D7AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truck-Tour", "Truck-Tour\Truck-Tour.csproj", "{88359FB7-F76D-4736-A34E-43DACEBD9658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balanced-Parenthesis", "Balanced-Parenthesis\Balanced-Parenthesis.csproj", "{CACFCD20-DE95-4527-B726-3B2D871A9463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +88,13 @@ Global
 		{34D96C89-722A-4F25-98FB-22D16578D7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34D96C89-722A-4F25-98FB-22D16578D7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34D96C89-722A-4F25-98FB-22D16578D7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88359FB7-F76D-4736-A34E-43DACEBD9658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88359FB7-F76D-4736-A34E-43DACEBD9658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88359FB7-F76D-4736-A34E-43DACEBD9658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88359FB7-F76D-4736-A34E-43DACEBD9658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
