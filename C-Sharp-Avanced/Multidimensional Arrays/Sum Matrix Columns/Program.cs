@@ -7,7 +7,9 @@ namespace Sum_Matrix_Elements
      * Write program that read a matrix from console and print the sum for each column.
      * On first line you will get matrix rows.
      * On the next rows lines, you will get elements for each column separated with a space.
-     */
+     *//// <summary>
+       /// /
+       /// </summary>
     class Program
     {
         static void Main(string[] args)
