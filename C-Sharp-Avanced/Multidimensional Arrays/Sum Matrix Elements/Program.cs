@@ -34,6 +34,7 @@ namespace Sum_Matrix_Elements
             Console.WriteLine(rows);
             Console.WriteLine(cols);
             Console.WriteLine(sum);
+            //daddaas
         }
     }
 }
