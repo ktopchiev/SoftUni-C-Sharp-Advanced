@@ -64,22 +64,7 @@ namespace _06.Wardrobe
                  dressForSearch = searchInput[1];   
             }
 
-            foreach (var color in wardrobe)
-            {
-                Console.WriteLine($"{color.Key} clothes:");
-                
-                foreach (var dress in color.Value)
-                {
-                    if (dress.Key == dressForSearch && color.Key == colorForSearch)
-                    {
-                        Console.WriteLine($"* {dress.Key} - {dress.Value} (found!)");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"* {dress.Key} - {dress.Value}");
-                    }
-                }
-            }
+            PrintWardrobeContent(wardrobe, colorForSearch, dressForSearch);
         }
 
         private static void EditColor(Dictionary<string, Dictionary<string, int>> wardrobe,string 
@@ -119,6 +104,27 @@ namespace _06.Wardrobe
                 }
                 
                 dressDict.Add(currentCloth, 1);
+            }
+        }
+
+        private static void PrintWardrobeContent(Dictionary<string, Dictionary<string, int>> 
+        wardrobe, string colorForSearch, string dressForSearch)
+        {
+            foreach (var color in wardrobe)
+            {
+                Console.WriteLine($"{color.Key} clothes:");
+                
+                foreach (var dress in color.Value)
+                {
+                    if (dress.Key == dressForSearch && color.Key == colorForSearch)
+                    {
+                        Console.WriteLine($"* {dress.Key} - {dress.Value} (found!)");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"* {dress.Key} - {dress.Value}");
+                    }
+                }
             }
         }
     }
