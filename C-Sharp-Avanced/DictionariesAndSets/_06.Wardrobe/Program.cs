@@ -1,7 +1,24 @@
-﻿using System;
+﻿/*Write a program that helps you decide what clothes to wear from your wardrobe. You will receive the clothes,
+ which are currently in your wardrobe, sorted by their color in the following format:
+"{color} -> {item1},{item2},{item3}…"
+If you receive a certain color, which already exists in your wardrobe, just add the clothes to its records. 
+You can also receive repeating items for a certain color and you have to keep their count.
+In the end, you will receive a color and a piece of clothing, which you will look for in the wardrobe, separated by a space in the following format:
+"{color} {clothing}"
+Your task is to print all the items and their count for each color in the following format: 
+"{color} clothes:
+* {item1} - {count}
+* {item2} - {count}
+* {item3} - {count}
+…
+* {itemN} - {count}"
+If you find the item you are looking for, you need to print "(found!)" next to it:
+"* {itemN} - {count} (found!)"*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace _06.Wardrobe
 {
@@ -16,81 +33,93 @@ namespace _06.Wardrobe
 
             for (int i = 0; i < n; i++)
             {
-                string[] clothesInput = Console.ReadLine().Split(new char[]{' ', ','}, StringSplitOptions.RemoveEmptyEntries);
-                List<string> clothesRange = new List<string>();
-                
-                for (int j = 2; j < clothesInput.Length; j++)
-                {
-                    clothesRange.Add(clothesInput[j]);
-                }
-                
-                string color = clothesInput[0];
+                List<string> clothesRange = Console.ReadLine().Split(new string[]{",", " -> "}, 
+                StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                string color = clothesRange[0];
+                clothesRange.Remove(color);
 
                 if (wardrobe.ContainsKey(color))
                 {
-                    foreach (var clr in wardrobe.Where(x => x.Key == color))
-                    {
-                        var dressData = clr.Value;
-
-                        for (int j = 0; j < clothesRange.Count; j++)
-                        {
-                            if (dressData.ContainsKey(clothesRange[j]))
-                            {
-                                dressData[clothesRange[j]]++;
-                            }
-                            else
-                            {
-                                dressData.Add(clothesRange[j], 1);
-                            }
-                        }
-                    }
+                    EditColor(wardrobe, color, clothesRange);
                 }
                 else
                 {
-                    wardrobe.Add(color, new Dictionary<string, int>());
-                    
-                    var dressDict = wardrobe[color];
-
-                    for (int j = 0; j < clothesRange.Count; j++)
-                    {
-                        var currentCloth = clothesRange[j];
-                        dressDict.Add(currentCloth, 1);
-                    }
-                    
+                    AddNewColor(wardrobe, color, clothesRange);
                 }
             }
             
             string[] searchInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            string colorForSearch = searchInput[0];
-            string dressForSearch = searchInput[1];
-
-            string printString = BuildString(wardrobe, colorForSearch, dressForSearch);
-
-            Console.WriteLine(printString);
-        }
-
-        private static string BuildString(Dictionary<string, Dictionary<string, int>> wardrobe,
-            string colorForSearch, string dressForSearch)
-        {
-            StringBuilder sb = new StringBuilder();
+            string colorForSearch = String.Empty;
+            string dressForSearch = String.Empty;
             
+            if (searchInput.Length > 2)
+            {
+                colorForSearch = $"{searchInput[0]} {searchInput[1]}";
+                dressForSearch = searchInput[2];
+            }
+            else
+            {
+                 colorForSearch = searchInput[0];
+                 dressForSearch = searchInput[1];   
+            }
+
             foreach (var color in wardrobe)
             {
-                sb.Append($"{color.Key} clothes:").AppendLine();
+                Console.WriteLine($"{color.Key} clothes:");
                 
                 foreach (var dress in color.Value)
                 {
-                    sb.Append($"* {dress.Key} - {dress.Value}");
                     if (dress.Key == dressForSearch && color.Key == colorForSearch)
                     {
-                        sb.Append(" (found!)");
+                        Console.WriteLine($"* {dress.Key} - {dress.Value} (found!)");
                     }
-
-                    sb.AppendLine();
+                    else
+                    {
+                        Console.WriteLine($"* {dress.Key} - {dress.Value}");
+                    }
                 }
             }
+        }
 
-            return sb.ToString();
+        private static void EditColor(Dictionary<string, Dictionary<string, int>> wardrobe,string 
+        color, List<string> clothesRange)
+        {
+            
+            var dressData = wardrobe[color];
+
+            for (int j = 0; j < clothesRange.Count; j++)
+            {
+                if (dressData.ContainsKey(clothesRange[j]))
+                {
+                    dressData[clothesRange[j]]++;
+                }
+                else
+                {
+                    dressData.Add(clothesRange[j], 1);
+                }
+            }
+        }
+        
+        private static void AddNewColor(Dictionary<string, Dictionary<string, int>> wardrobe, string 
+        color, List<string> clothesRange)
+        {
+            wardrobe.Add(color, new Dictionary<string, int>());
+                    
+            var dressDict = wardrobe[color];
+
+            for (int j = 0; j < clothesRange.Count; j++)
+            {
+                var currentCloth = clothesRange[j];
+                
+                if (dressDict.ContainsKey(currentCloth))
+                {
+                    dressDict[currentCloth]++;
+                    continue;
+                }
+                
+                dressDict.Add(currentCloth, 1);
+            }
         }
     }
 }
