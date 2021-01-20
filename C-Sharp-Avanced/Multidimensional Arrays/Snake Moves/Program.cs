@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Snake_Moves
@@ -12,40 +13,38 @@ namespace Snake_Moves
             int rows = dimensions[0];
             int cols = dimensions[1];
 
-            char[] snake = Console.ReadLine().Split("", StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
+            char[] snake = Console.ReadLine().ToCharArray();
+            Queue<char> snakeChars = new Queue<char>();
 
-            snake.Reverse();
-
-            char[,] isle = new char[rows, cols];
-
-            int currentSnakeIndex = 0;
-
-            for (int row = 0; row < isle.GetLength(0); row++)
+            char[,] matrix = new char[rows, cols];
+            
+            for (int i = 0; i < rows; i++)
             {
-                snake.Reverse();
-                
-                for (int col = 0; col < isle.GetLength(1); col++)
+                for (int j = 0; j < cols; j++)
                 {
-                    if (col > snake.Length - 1)
-                    {
-                        for (int i = 0; i < isle.GetLength(1); i++)
-                        {
-                            isle[row, col] = snake[i];
-                            currentSnakeIndex = i;
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < currentSnakeIndex; i++)
-                        {
-                            isle[row, col] = snake[i];
-                        }
-                    }
-
-                    isle[row, col] = snake[col];
+                    snakeChars.Enqueue(snake[j]);
                 }
             }
 
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                if (row % 2 == 0)
+                {
+                    for (int col = 0; col < matrix.GetLength(1); col++)
+                    {
+                        matrix[row, col] = snakeChars.Dequeue();
+                    }   
+                }
+                else
+                {
+                    for (int col = matrix.GetLength(1) - 1; col > 0; col--)
+                    {
+                        matrix[row, col] = snakeChars.Dequeue();
+                    }
+                }
+            }
+
+            Console.WriteLine();
         }
     }
 }
