@@ -18,7 +18,7 @@ namespace _04.Even_Times
 
                if (!numsCounts.ContainsKey(input))
                {
-                   numsCounts.Add(input, 0);
+                   numsCounts.Add(input, 1);
                }
                else
                {
@@ -30,7 +30,7 @@ namespace _04.Even_Times
             {
                 int value = pair.Value;
 
-                if (value == 1)
+                if (value % 2 == 0)
                 {
                     Console.WriteLine(pair.Key);
                 }
