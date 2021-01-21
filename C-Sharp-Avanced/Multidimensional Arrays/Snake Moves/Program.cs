@@ -43,7 +43,7 @@ namespace Snake_Moves
                 }
             }
             
-            //Populate the matrix with the snake
+            //Populating the matrix with the snake
             for (int row = 0; row < isle.GetLength(0); row++)
             {
                 if (row % 2 != 0)
