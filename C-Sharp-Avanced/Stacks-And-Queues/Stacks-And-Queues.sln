@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truck-Tour", "Truck-Tour\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balanced-Parenthesis", "Balanced-Parenthesis\Balanced-Parenthesis.csproj", "{CACFCD20-DE95-4527-B726-3B2D871A9463}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-text-editor", "Simple-text-editor\Simple-text-editor.csproj", "{36C0F19F-80FA-4A4D-B9FA-0A5AF4AABB4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CACFCD20-DE95-4527-B726-3B2D871A9463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C0F19F-80FA-4A4D-B9FA-0A5AF4AABB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C0F19F-80FA-4A4D-B9FA-0A5AF4AABB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C0F19F-80FA-4A4D-B9FA-0A5AF4AABB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C0F19F-80FA-4A4D-B9FA-0A5AF4AABB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
