@@ -23,7 +23,7 @@ namespace Knight_Game
             
             int knightsForRemove = 0;
             int strongestKnight = 0;
-            int knightXpostiion = 0;
+            int knightXposition = 0;
             int knightYposition = 0;
 
             while (true)
@@ -31,7 +31,7 @@ namespace Knight_Game
                 //Check for possible moves and count knights which should be removed
                 for (int row = 0; row < board.GetLength(0); row++)
                 {
-
+                    
                     for (int col = 0; col < board.GetLength(1); col++)
                     {
                         int hitCounter = 0;
@@ -48,8 +48,8 @@ namespace Knight_Game
                                 int x = row + horizontalMoves[move];
                                 int y = col + verticalMoves[move];
 
-                                //Check if there is another Knight and count
-                                if (board[x, y] == "K" && x >= 0 && y >= 0 && x < n && y < n)
+                                //Check if there is another Knight on the way and count the hit
+                                if (x >= 0 && y >= 0 && x < n && y < n && board[x, y] == "K")
                                 {
                                     hitCounter++;
                                 }
@@ -58,32 +58,29 @@ namespace Knight_Game
                             if (hitCounter > strongestKnight)
                             {
                                 strongestKnight = hitCounter;
-                                knightXpostiion = row;
+                                hitCounter = 0;
+                                knightXposition = row;
                                 knightYposition = col;
-                                knightsForRemove++;
                             }
                         }
                     }
                 }
-
-                board[knightXpostiion, knightYposition] = "0";
-
-                if (strongestKnight == 0)
+                
+                //Remove the strongest knight with biggest amount of possibilities to hit another knight
+                if (strongestKnight > 0)
+                {
+                    board[knightXposition, knightYposition] = "0";
+                    strongestKnight = 0;
+                    knightsForRemove++;   
+                }
+                else
                 {
                     break;
                 }
+
             }
 
             Console.WriteLine(knightsForRemove);
-
-            for (int i = 0; i < board.GetLength(0); i++)
-            {
-                for (int j = 0; j < board.GetLength(1); j++)
-                {
-                    Console.Write(board[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
         }
     }
 }
