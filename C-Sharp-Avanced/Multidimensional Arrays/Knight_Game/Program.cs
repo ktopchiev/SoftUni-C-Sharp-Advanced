@@ -63,6 +63,7 @@ namespace Knight_Game
                                 }
                             }
                             
+                            //If there is stronger knight replace current data with his data 'cause we're searching for the strongest knight
                             if (hitCounter > strongestKnight)
                             {
                                 strongestKnight = hitCounter;
