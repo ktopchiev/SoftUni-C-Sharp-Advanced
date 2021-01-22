@@ -36,7 +36,11 @@ namespace Knight_Game
 
             while (true)
             {
-                //Check for possible moves and count knights which should be removed
+                /*Check for possible moves and count knights which should be removed. The knights with
+                * biggest amount of possibilities to hit another knight are the strongest, we should remove them
+                 * first, until no such knights left. Then if there is no such knight we should stop and print the amount
+                 * of knights for remove.
+                */
                 for (int row = 0; row < chessBoard.GetLength(0); row++)
                 {
                     
