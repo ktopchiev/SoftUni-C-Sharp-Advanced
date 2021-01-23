@@ -20,31 +20,21 @@ namespace Simple_text_editor
                 //Console.WriteLine($" {text.ToString()} - {n - i} operations left");
                 string[] commands = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (commands.Length > 0)
+                if (commands.Length > 0 && commands.Length < 3)
                 {
                     string command = commands[0];
-                    
-                    //First command
+
                     if (command == "1" && commands.Length > 1)
                     {
-                        foreach (var str in commands)
-                        {
-                            if (str != command)
-                            {
-                                if (commands.Length > 2)
-                                    text.Append($"{str} ");
-                                else
-                                    text.Append(str);
-                            }
-                        }
+                        string str = commands[1];
+                        text.Append(str);
 
-                        string strForAppend = text.ToString();
-                        
-                        GetLastDoneCommand(lastDoneCommand, command, strForAppend);
+                        GetLastDoneCommand(lastDoneCommand, command, commands[1]);
                     }
-                    
-                    //Second command
-                    else if (commands.Length > 1 && commands.Length < 3 && command == "2" && text.Length >= int.Parse(commands[1]) && int.Parse(commands[1]) >= 0)
+                    else if (commands.Length > 1 && command == "2" &&
+                             text.Length >= int.Parse(commands[1]) && int
+                                 .Parse
+                                     (commands[1]) >= 0)
                     {
                         int count = int.Parse(commands[1]);
 
@@ -61,15 +51,15 @@ namespace Simple_text_editor
                         GetLastDoneCommand(lastDoneCommand, command, commands[1]);
 
                     }
-                    
-                    //Third command
-                    else if (commands.Length > 1 && commands.Length < 3 && command == "3" && text.Length >= int.Parse(commands[1]) && int.Parse(commands[1]) > 0)
+                    else if (commands.Length > 1 && command == "3" && text.Length >= int.Parse(commands[1]) && int
+                    .Parse
+                        (commands[1]) > 0)
                     {
                         int index = int.Parse(commands[1]) - 1;
 
                         Console.WriteLine(string.Join("", text[index].ToString()));
                     }
-                    else if (command == "4" && lastDoneCommand.Count > 1 && command.Length == 1)
+                    else if (command == "4" && lastDoneCommand.Count > 1)
                     {
                         if (lastDoneCommand.Peek() != "1c" && lastDoneCommand.Peek() != "2c")
                         {
