@@ -30,6 +30,7 @@ namespace Word_Count
 
                 foreach (var word in words)
                 {
+                    //For every new word re-open stream and start to read from the beginning
                     textReader = new StreamReader(pathToText);
                     
                     using (textReader)
@@ -38,6 +39,7 @@ namespace Word_Count
                         
                         while (textLine != null)
                         {
+                            //Reading text should be case insensitive
                             textLine = textLine.ToLower();
 
                             int wordCounter = 0;
@@ -45,6 +47,7 @@ namespace Word_Count
                             if (textLine.Contains(word))
                             {
                                 wordCounter++;
+                                
                                 if (wordoMeter.ContainsKey(word))
                                 {
                                     wordoMeter[word]++;
@@ -57,6 +60,7 @@ namespace Word_Count
 
                             textLine = textReader.ReadLine();
                             
+                            //When the whole text has been read close the stream
                             if (textLine == null)
                             {
                                 textReader.Close();
@@ -67,6 +71,7 @@ namespace Word_Count
 
                 using (writer)
                 {
+                    //Print the word counts in descending order
                     foreach (var pair in wordoMeter.OrderByDescending(x => x.Value))
                     {
                         writer.WriteLine($"{pair.Key} - {pair.Value}");
