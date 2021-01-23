@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace Simple_text_editor
@@ -33,7 +34,12 @@ namespace Simple_text_editor
                              text.Length >= int.Parse(commands[1]) &&
                              int.Parse(commands[1]) >= 0)
                     {
-                        EraseLastElements(commands[1], command, text, lastErasedStr, lastDoneCommand);
+                        int countForErase = 0;
+                        
+                        if (int.TryParse(commands[1], out countForErase))
+                        {
+                            EraseLastElements(countForErase, command, text, lastErasedStr, lastDoneCommand);   
+                        }
                     }
                     else if (commands.Length > 1 && 
                              command == "3" && 
@@ -69,11 +75,11 @@ namespace Simple_text_editor
             GetLastDoneCommand(lastDoneCommand, command, commandString);
         }
 
-        private static void EraseLastElements(string commandString, string command , StringBuilder 
+        private static void EraseLastElements(int countForErase, string command , StringBuilder 
         text, 
         StringBuilder removedStr, Stack<string> lastDoneCommand)
         {
-            int count = int.Parse(commandString);
+            int count = countForErase;
 
             removedStr.Clear();
 
@@ -85,7 +91,7 @@ namespace Simple_text_editor
 
             text.Remove(startIndex, count);
 
-            GetLastDoneCommand(lastDoneCommand, command, commandString);
+            GetLastDoneCommand(lastDoneCommand, command, countForErase.ToString());
         }
         
         private static void PrintElementAt(string commandStr, StringBuilder text)
