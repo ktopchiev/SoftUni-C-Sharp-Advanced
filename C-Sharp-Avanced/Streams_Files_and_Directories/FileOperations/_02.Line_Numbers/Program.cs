@@ -34,7 +34,6 @@ namespace Line_numbers
                 punctuationMarksCount = 0;
                 lineNum++;
             }
-            
         }
     }
 }
