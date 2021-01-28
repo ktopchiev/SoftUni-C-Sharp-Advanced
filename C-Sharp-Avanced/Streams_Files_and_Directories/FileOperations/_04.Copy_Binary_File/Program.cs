@@ -13,7 +13,6 @@ namespace _04.Copy_Binary_File
                 // create a buffer to hold the bytes 
                 byte[] buffer = new Byte[1024];
                 int bytesRead;
-                int kbs = 0;
                 // while the read method returns bytes
                 // keep writing them to the output stream
                 while ((bytesRead =
