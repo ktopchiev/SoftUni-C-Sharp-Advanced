@@ -9,12 +9,13 @@ namespace _05.Directory_Traversal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Environment.CurrentDirectory);
+            //Change directory if necessary
             string[] files = Directory.GetFiles(Environment.CurrentDirectory);
 
             Dictionary<string, Dictionary<string, double>> filesData =
                 new Dictionary<string, Dictionary<string, double>>();
             
+            //Get files data and store it in dictionary
             foreach (var file in files)
             {
                 FileInfo fileInfo = new FileInfo(file);
@@ -32,12 +33,14 @@ namespace _05.Directory_Traversal
                     filesData[fileExtension].Add(fileInfo.Name, size);
                 }
             }
-
+            
+            //Always valid desktop path regardless of the user.
             string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/report.txt";
             
             FileStream fileStream = new FileStream(path, FileMode.CreateNew, FileAccess.ReadWrite);
             fileStream.Close();
             
+            //Write files data in report.txt file on desktop
             foreach (var pair in filesData
                 .OrderByDescending(x => x.Value.Count)
                 .ThenBy(x => x))
