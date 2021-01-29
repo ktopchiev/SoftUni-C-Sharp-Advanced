@@ -1,0 +1,17 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/.idea.Multidimensional Arrays.iml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Avanced\Multidimensional Arrays\.idea\.idea.Multidimensional Arrays\.idea/dataSources/
+/dataSources.local.xml
+[Bb]in/
+[Oo]bj/
+# Editor-based HTTP Client requests
+/httpRequests/
+**/Multidimensional Arrays/**/bin
+**/Multidimensional Arrays/**/obj
