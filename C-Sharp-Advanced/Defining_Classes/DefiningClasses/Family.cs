@@ -22,5 +22,20 @@ namespace DefiningClasses
             var oldestPerson = People.OrderByDescending(x => x.Age).FirstOrDefault();
             return oldestPerson;
         }
+
+        public List<Person> GetOlderThanThirtyMembers()
+        {
+            List<Person> adultMembers = new List<Person>();
+
+            foreach (var familyMember in People)
+            {
+                if (familyMember.Age > 30)
+                {
+                    adultMembers.Add(familyMember);
+                }
+            }
+            
+            return adultMembers;
+        }
     }
 }
