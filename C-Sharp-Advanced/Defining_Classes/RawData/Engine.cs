@@ -2,8 +2,8 @@
 {
     public class Engine
     {
-        public int Speed { get; set; }
-        public int Power { get; set; }
+        private int Speed { get; }
+        public int Power { get; }
 
         public Engine(int speed, int power)
         {

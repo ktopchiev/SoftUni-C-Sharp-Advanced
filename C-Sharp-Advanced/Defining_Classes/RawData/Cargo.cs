@@ -2,8 +2,8 @@
 {
     public class Cargo
     {
-        public int Weight { get; set; }
-        public string Type { get; set; }
+        private int Weight { get; }
+        public string Type { get; }
 
         public Cargo(int weight, string type)
         {
