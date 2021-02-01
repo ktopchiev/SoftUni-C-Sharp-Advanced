@@ -58,34 +58,37 @@ namespace Pokemon_trainer
                 {
                     break;
                 }
-                
-                foreach (var trainer in trainers)
+
+                if (elementInput == "Fire" || elementInput == "Water" || elementInput == "Electricity")
                 {
-                    bool hasGivenElement = trainer.Pokemons.Any(x => x.Element == elementInput);
+                    foreach (var trainer in trainers)
+                    {
+                        bool hasGivenElement = trainer.Pokemons.Any(x => x.Element == elementInput);
 
-                    if (hasGivenElement)
-                    {
-                        trainer.AddToBadge();
-                    }
-                    else if (trainers.Count > 1)
-                    {
-                        trainer.AttackPokemons();
-                    }
-
-                    if (trainer.Pokemons.Count > 0)
-                    {
-                        foreach (var pokemon in trainer.Pokemons)
+                        if (hasGivenElement)
                         {
-                            if (pokemon.Health <= 0)
+                            trainer.AddToBadge();
+                        }
+                        else if (trainers.Count > 1)
+                        {
+                            trainer.AttackPokemons();
+                        }
+
+                        if (trainer.Pokemons.Count > 0)
+                        {
+                            foreach (var pokemon in trainer.Pokemons)
                             {
-                                trainer.Pokemons.Remove(pokemon);
-                                if (trainer.Pokemons.Count == 0)
+                                if (pokemon.Health <= 0)
                                 {
-                                    break;
+                                    trainer.Pokemons.Remove(pokemon);
+                                    if (trainer.Pokemons.Count == 0)
+                                    {
+                                        break;
+                                    }
                                 }
-                            }
-                        }   
-                    }
+                            }   
+                        }
+                    }   
                 }
             }
 
