@@ -69,24 +69,14 @@ namespace Pokemon_trainer
                         {
                             trainer.AddToBadge();
                         }
-                        else if (trainers.Count > 1)
+                        else
                         {
                             trainer.AttackPokemons();
                         }
 
                         if (trainer.Pokemons.Count > 0)
                         {
-                            foreach (var pokemon in trainer.Pokemons)
-                            {
-                                if (pokemon.Health <= 0)
-                                {
-                                    trainer.Pokemons.Remove(pokemon);
-                                    if (trainer.Pokemons.Count == 0)
-                                    {
-                                        break;
-                                    }
-                                }
-                            }   
+                            trainer.Pokemons.RemoveAll(x => x.Health <= 0);
                         }
                     }   
                 }
