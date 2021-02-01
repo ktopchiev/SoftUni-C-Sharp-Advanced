@@ -82,14 +82,13 @@ namespace Pokemon_trainer
                 }
             }
 
-            if (trainers.Count > 0)
+            
+            foreach (var trainer in trainers.OrderByDescending(x => x.GetBadges()))
             {
-                foreach (var trainer in trainers.OrderByDescending(x => x.GetBadges()))
-                {
-                    Console.Write($"{trainer.Name} {trainer.GetBadges()} {trainer.Pokemons.Count}");
-                    Console.WriteLine();
-                }   
-            }
+                Console.Write($"{trainer.Name} {trainer.GetBadges()} {trainer.Pokemons.Count}");
+                Console.WriteLine();
+            }   
+            
         }
     }
 }

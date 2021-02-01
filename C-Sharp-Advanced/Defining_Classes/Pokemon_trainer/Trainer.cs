@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Pokemon_trainer
 {
@@ -27,10 +28,11 @@ namespace Pokemon_trainer
 
         public void AttackPokemons()
         {
-            foreach (var pokemon in Pokemons)
+            Pokemons.Select(x =>
             {
-                pokemon.Health -= 10;
-            }
+                x.Health -= 10;
+                return x;
+            }).ToList();
         }
     }
 }
