@@ -36,7 +36,7 @@ namespace Car_salesman
             Color = color;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 

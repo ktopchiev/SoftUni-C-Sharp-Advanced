@@ -63,6 +63,7 @@ namespace Car_salesman
 
             for (int i = 0; i < m; i++)
             {
+                //A car's weight and color are optional
                 string[] automobilesInput =
                     Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
