@@ -8,17 +8,18 @@ namespace Custom_Min_Function
     {
         static void Main(string[] args)
         {
-            //Custom Min function
-            HashSet<int> setOfIntegers = Console.ReadLine().Split(" ", StringSplitOptions
-                .RemoveEmptyEntries).Select(int.Parse).ToHashSet();
+            //Custom Min function that returns the smallest integer
+            
+            int[] setOfIntegers = Console.ReadLine().Split(" ", StringSplitOptions
+                .RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-            Func<HashSet<int>, int> Min = GetMin;
+            Func<int[], int> Min = GetMin;
             Console.WriteLine(Min(setOfIntegers));
         }
 
-        static int GetMin(HashSet<int> integers)
+        static int GetMin(int[] integers)
         {
-            int min = integers.First();
+            int min = integers[0];
             
             foreach (var integer in integers)
             {
