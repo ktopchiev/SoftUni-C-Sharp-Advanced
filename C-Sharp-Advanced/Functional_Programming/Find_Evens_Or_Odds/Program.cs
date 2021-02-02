@@ -26,8 +26,8 @@ namespace Find_Evens_Or_Odds
             Predicate<int> oddNumFinder = i => i % 2 != 0;
             Predicate<int> evenNumFinder = i => i % 2 == 0;
 
-            List<int> odds = integers.FindAll(oddNumFinder);
-            List<int> evens = integers.FindAll(evenNumFinder);
+            List<int> odds = integers.FindAll(oddNumFinder).ToList();
+            List<int> evens = integers.FindAll(evenNumFinder).ToList();
 
             string finderCommand = Console.ReadLine();
 
