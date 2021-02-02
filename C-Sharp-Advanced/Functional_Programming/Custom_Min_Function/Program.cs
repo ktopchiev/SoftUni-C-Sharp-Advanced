@@ -13,11 +13,11 @@ namespace Custom_Min_Function
             int[] setOfIntegers = Console.ReadLine().Split(" ", StringSplitOptions
                 .RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-            Func<int[], int> Min = GetMin;
+            Func<int[], int> Min = GetMinInt;
             Console.WriteLine(Min(setOfIntegers));
         }
 
-        static int GetMin(int[] integers)
+        static int GetMinInt(int[] integers)
         {
             int min = integers[0];
             
