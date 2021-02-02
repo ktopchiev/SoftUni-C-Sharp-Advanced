@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort_Even_Numbers", "Sort_Even_Numbers\Sort_Even_Numbers.csproj", "{C5574EBB-A08B-4EC0-BCC0-0F0266354359}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Action_Print", "Action_Print\Action_Print.csproj", "{6C1B7658-4246-4494-BE20-B61A67FF7164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knights_of_Horror", "Knights_of_Horror\Knights_of_Horror.csproj", "{BC6E8D17-CC9F-41B3-B188-3D21A85026C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{C5574EBB-A08B-4EC0-BCC0-0F0266354359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5574EBB-A08B-4EC0-BCC0-0F0266354359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5574EBB-A08B-4EC0-BCC0-0F0266354359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1B7658-4246-4494-BE20-B61A67FF7164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1B7658-4246-4494-BE20-B61A67FF7164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1B7658-4246-4494-BE20-B61A67FF7164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1B7658-4246-4494-BE20-B61A67FF7164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6E8D17-CC9F-41B3-B188-3D21A85026C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6E8D17-CC9F-41B3-B188-3D21A85026C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6E8D17-CC9F-41B3-B188-3D21A85026C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6E8D17-CC9F-41B3-B188-3D21A85026C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
