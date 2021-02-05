@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
+/.idea.CSharp_Advanced_Exam-22_Feb_2020.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Advanced\CSharp_Advanced_Exam-22_Feb_2020\.idea\.idea.CSharp_Advanced_Exam-22_Feb_2020\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
