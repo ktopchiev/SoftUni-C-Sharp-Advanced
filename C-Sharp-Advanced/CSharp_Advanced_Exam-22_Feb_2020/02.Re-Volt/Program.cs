@@ -11,38 +11,49 @@ namespace _02.Re_Volt
 
             string[,] gameField = new string[n,n];
 
-            int countOfCommands = int.Parse(Console.ReadLine());
+            int commandsNumberLimit = int.Parse(Console.ReadLine());
 
-            //Get the rows of the matrix
+            //Get the content of the matrix
 
-            FillMatrix(gameField);
-
-            int[] currentPosition = FindPlayerPosition(gameField);
+            int[] currentPosition = FillMatrix(gameField);
             
-            bool reachedFinal = false;
+            int currentRow = currentPosition[0];
+            int currentCol = currentPosition[1];
+
+            bool finalIsReached = false;
+
+            int enteredCommandsNum = 0;
 
             //Play the game
-            for (int i = 0; i < countOfCommands; i++)
+            while(enteredCommandsNum < commandsNumberLimit && !finalIsReached)
             {
                 string command = Console.ReadLine();
-                
-                if (reachedFinal)
+
+                finalIsReached = MovePlayer(command,gameField, currentRow, currentCol);
+
+                enteredCommandsNum++;
+
+            }
+            
+            //At the end print the result and the game field
+            switch (finalIsReached)
+            {
+                case true:
+                    Console.WriteLine("Player won!");
+                    PrintGameField(gameField);
                     break;
-
-                var targetPositionStatus = GetTargetPositionStatus(command, gameField, currentPosition);
-
-                MovePlayer(command,targetPositionStatus,gameField,currentPosition);
-                
-                currentPosition = FindPlayerPosition(gameField);
-
-                reachedFinal = CheckForReachedFinal(gameField);
+                case false:
+                    Console.WriteLine("Player lost!");
+                    PrintGameField(gameField);
+                    break;
             }
 
         }
 
-//Methods
-        static void FillMatrix(string[,] gameField)
+        //Methods
+        static int[] FillMatrix(string[,] gameField)
         {
+            int[] currentPosition = new int[2];
             //Populate the matrix with content from the console
             for (int row = 0; row < gameField.GetLength(0); row++)
             {
@@ -51,75 +62,94 @@ namespace _02.Re_Volt
                 for (int col = 0; col < gameField.GetLength(1); col++)
                 {
                     gameField[row,col] = rowInput[col].ToString();
-                }
-            }
-        }
-        
-        static int[] FindPlayerPosition(string[,] gameField)
-        {
-            //Find player's current position in the matrix
-            int[] position = {0, 0};
-            
-            for (int row = 0; row < gameField.GetLength(0); row++)
-            {
-                for (int col = 0; col < gameField.GetLength(1); col++)
-                {
-                    if (gameField[row,col] == "f")
+                    if (rowInput[col] == 'f')
                     {
-                        position[0] = row;
-                        position[1] = col;
+                        currentPosition[0] = row;
+                        currentPosition[1] = col;
                     }
                 }
             }
 
-            return position;
+            return currentPosition;
         }
+        
 
-        static string GetTargetPositionStatus(string command, string[,] gameField, int[] currentPosition)
+        static bool MovePlayer(string command, string[,] gameField, int currentRow, int currentCol)
         {
-            //Get string of content of the target position from the matrix
-            string status = null;
-            int row = currentPosition[0];
-            int col = currentPosition[1];
+            bool hasWon = false;
+            gameField[currentRow, currentCol] = "-";
             
-            switch (command)
+            if (command == "up")
             {
-                case "up":
-                    status = gameField[row - 1, col];
-                    break;
-                case "down":
-                    status = gameField[row + 1, col];
-                    break;
-                case "left":
-                    status = gameField[row, col - 1];
-                    break;
-                case "right":
-                    status = gameField[row, col + 1];
-                    break;
-            }
-
-            return status;
-        }
-
-        static void MovePlayer(string command, string targetPositionStatus, string[,] gameField, int[] 
-        currentPlayerPosition)
-        {
-            
-        }
-
-        static bool CheckForReachedFinal(string[,] gameField)
-        {
-            bool reachedFinal = true;
-
-            foreach (var point in gameField)
-            {
-                if (point == "F")
+                bool isCrossed = IsBoundaryCrossed(command, gameField, currentRow, currentCol);
+                currentRow = isCrossed ? gameField.Length - 1 : currentRow - 1;
+                
+                if (gameField[currentRow, currentCol] == "B")
                 {
-                    reachedFinal = false;
+                    MovePlayer("up", gameField, currentRow, currentCol);
+                }
+                else if (gameField[currentRow, currentCol] == "F")
+                {
+                    hasWon = true;
+                }
+                else if (gameField[currentRow,currentCol] == "T")
+                {
+                    MovePlayer("down", gameField, currentRow, currentCol);
+                }
+            }
+            
+
+            return hasWon;
+        }
+
+        static bool IsBoundaryCrossed(string command, string[,] gameField, int currentRow, int currentCol)
+        {
+            
+            bool isCrossed = false;
+            
+            if (command == "up")
+            {
+                if (currentRow - 1 < 0)
+                {
+                    isCrossed = true;
+                }
+            }
+            else if (command == "down")
+            {
+                if (currentRow + 1 >= gameField.GetLength(0))
+                {
+                    isCrossed = true;
+                }
+            }
+            else if (command == "left")
+            {
+                if (currentCol - 1 < 0)
+                {
+                    isCrossed = true;
+                }
+            }
+            else if (command == "right")
+            {
+                if (currentCol + 1 >= gameField.GetLength(1))
+                {
+                    isCrossed = true;
                 }
             }
 
-            return reachedFinal;
+            return isCrossed;
+        }
+
+        static void PrintGameField(string[,] gameField)
+        {
+            for (int row = 0; row < gameField.GetLength(0); row++)
+            {
+                for (int col = 0; col < gameField.GetLength(1); col++)
+                {
+                    Console.Write(gameField[row,col]);
+                }
+
+                Console.WriteLine();
+            }
         }
     }
 }
