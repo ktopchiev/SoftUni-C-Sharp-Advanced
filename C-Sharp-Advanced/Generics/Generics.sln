@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxOfT", "BoxOfT\BoxOfT.csproj", "{468F7FDC-7210-4E52-A986-781C72FB7342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericArrayCreator", "GenericArrayCreator\GenericArrayCreator.csproj", "{4C3A2B81-4B4B-4A8B-B37A-F5ADC311867C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericScale", "GenericScale\GenericScale.csproj", "{CA3FC894-6B23-4C3D-8B4B-241A89C25765}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{468F7FDC-7210-4E52-A986-781C72FB7342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468F7FDC-7210-4E52-A986-781C72FB7342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468F7FDC-7210-4E52-A986-781C72FB7342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468F7FDC-7210-4E52-A986-781C72FB7342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C3A2B81-4B4B-4A8B-B37A-F5ADC311867C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3A2B81-4B4B-4A8B-B37A-F5ADC311867C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3A2B81-4B4B-4A8B-B37A-F5ADC311867C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3A2B81-4B4B-4A8B-B37A-F5ADC311867C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3FC894-6B23-4C3D-8B4B-241A89C25765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3FC894-6B23-4C3D-8B4B-241A89C25765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3FC894-6B23-4C3D-8B4B-241A89C25765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3FC894-6B23-4C3D-8B4B-241A89C25765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
