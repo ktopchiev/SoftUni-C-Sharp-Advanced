@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericScale", "GenericScal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box", "Box\Box.csproj", "{B0A24C51-88AF-4500-A301-F73CEC9C607A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{32929C18-21B2-4870-951C-6416722D2AD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{B0A24C51-88AF-4500-A301-F73CEC9C607A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0A24C51-88AF-4500-A301-F73CEC9C607A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0A24C51-88AF-4500-A301-F73CEC9C607A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32929C18-21B2-4870-951C-6416722D2AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32929C18-21B2-4870-951C-6416722D2AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32929C18-21B2-4870-951C-6416722D2AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32929C18-21B2-4870-951C-6416722D2AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
