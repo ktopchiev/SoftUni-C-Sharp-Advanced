@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box", "Box\Box.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{32929C18-21B2-4870-951C-6416722D2AD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodStrings", "GenericCountMethodStrings\GenericCountMethodStrings.csproj", "{8A4072B2-2F82-4752-BC8D-579E387EF942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuple", "Tuple\Tuple.csproj", "{55B22A78-1BB0-41BD-A9E3-37C3FA37CBF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{32929C18-21B2-4870-951C-6416722D2AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32929C18-21B2-4870-951C-6416722D2AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32929C18-21B2-4870-951C-6416722D2AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A4072B2-2F82-4752-BC8D-579E387EF942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4072B2-2F82-4752-BC8D-579E387EF942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4072B2-2F82-4752-BC8D-579E387EF942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4072B2-2F82-4752-BC8D-579E387EF942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B22A78-1BB0-41BD-A9E3-37C3FA37CBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B22A78-1BB0-41BD-A9E3-37C3FA37CBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B22A78-1BB0-41BD-A9E3-37C3FA37CBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B22A78-1BB0-41BD-A9E3-37C3FA37CBF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
