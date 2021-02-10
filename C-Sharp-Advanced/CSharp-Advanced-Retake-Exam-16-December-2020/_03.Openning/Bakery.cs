@@ -32,7 +32,7 @@ namespace BakeryOpenning
             Predicate<Employee> empl = empl => empl.Name == name;
             bool isExist = Employees.Exists(empl);
             Employees.RemoveAll(empl);
-            return Employees.Exists(empl);
+            return isExist;
         }
 
         public Employee GetOldestEmployee()
