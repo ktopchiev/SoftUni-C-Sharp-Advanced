@@ -41,7 +41,7 @@ namespace _02.Selling
             }
             
             int collectedMoney = 0;
-            
+            bool validIndex = IsValidIndex(bakerPositionRow, bakerPositionCol, bakerySize);
             
             //Move inside
             while (true)
