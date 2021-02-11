@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Parking.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Advanced\CSharp-Advanced-Exam-28-June-2020\_03. Parking\Parking\.idea\.idea.Parking\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
