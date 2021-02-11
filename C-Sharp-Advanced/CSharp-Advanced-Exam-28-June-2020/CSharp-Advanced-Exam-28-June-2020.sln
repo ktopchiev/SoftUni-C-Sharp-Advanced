@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_01. Bombs", "_01. Bombs\_01. Bombs.csproj", "{1106146C-5586-45B2-82A5-3DC5A2E1298F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_02. Snake", "_02. Snake\_02. Snake.csproj", "{3B6CC7FF-4C15-4F7F-86DB-4D2CD051A2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_03. Parking", "_03. Parking\_03. Parking.csproj", "{545B04A2-52FE-4BA1-AB87-D13B28C95C5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1106146C-5586-45B2-82A5-3DC5A2E1298F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1106146C-5586-45B2-82A5-3DC5A2E1298F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1106146C-5586-45B2-82A5-3DC5A2E1298F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1106146C-5586-45B2-82A5-3DC5A2E1298F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6CC7FF-4C15-4F7F-86DB-4D2CD051A2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6CC7FF-4C15-4F7F-86DB-4D2CD051A2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6CC7FF-4C15-4F7F-86DB-4D2CD051A2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6CC7FF-4C15-4F7F-86DB-4D2CD051A2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545B04A2-52FE-4BA1-AB87-D13B28C95C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545B04A2-52FE-4BA1-AB87-D13B28C95C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545B04A2-52FE-4BA1-AB87-D13B28C95C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545B04A2-52FE-4BA1-AB87-D13B28C95C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
