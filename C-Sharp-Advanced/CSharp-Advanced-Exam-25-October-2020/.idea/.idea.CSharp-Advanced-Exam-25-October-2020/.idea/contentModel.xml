@@ -20,7 +20,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Classroom.cs" t="Include" />
         <e p="Classroom.csproj" t="IncludeRecursive" />
-        <e p="Classroom.zip" t="Include" />
         <e p="ClassroomProject.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
