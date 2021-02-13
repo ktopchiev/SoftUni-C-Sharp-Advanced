@@ -10,9 +10,9 @@ namespace _02.Garden
         {
             //Get input for the dimensions of the garden
             int[] dimensionsInput = Console.ReadLine()
-                .Split(" ", StringSplitOptions
-                .RemoveEmptyEntries)
-                .Select(int.Parse).ToArray();
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
 
             int n = dimensionsInput[0];
             int m = dimensionsInput[1];
