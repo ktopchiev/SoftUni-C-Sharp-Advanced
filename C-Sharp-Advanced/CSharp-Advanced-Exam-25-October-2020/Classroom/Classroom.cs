@@ -23,20 +23,19 @@ namespace ClassroomProject
                 students.Add(student);
                 return $"Added student {student.FirstName} {student.LastName}";
             }
-            
+
             return $"No seats in the classroom";
         }
 
         public string DismissStudent(string firstName, string lastName)
         {
-            var student =
-                students.FirstOrDefault(s => s.FirstName == firstName && s.LastName == lastName);
+            var student = students.FirstOrDefault(s => s.FirstName == firstName && s.LastName == lastName);
 
             if (student is null)
             {
                 return "Student not found";
             }
-            
+
             students.Remove(student);
             return $"Dismissed student {firstName} {lastName}";
         }
@@ -51,8 +50,8 @@ namespace ClassroomProject
             {
                 return "No students enrolled for the subject";
             }
-            
-            foreach (var student in students.Where(s => s.Subject == subject) )
+
+            foreach (var student in students.Where(s => s.Subject == subject))
             {
                 sb.Append($"{student.FirstName} {student.LastName}").AppendLine();
             }
