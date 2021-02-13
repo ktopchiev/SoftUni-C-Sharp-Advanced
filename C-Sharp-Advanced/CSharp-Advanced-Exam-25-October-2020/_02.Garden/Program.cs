@@ -94,7 +94,8 @@ namespace _02.Garden
 
                 garden[currentFlowerRow, currentFlowerCol] = 1;
             }
-
+            
+            //Print the garden
             for (int row = 0; row < garden.GetLength(0); row++)
             {
                 for (int col = 0; col < garden.GetLength(1); col++)
@@ -104,9 +105,6 @@ namespace _02.Garden
 
                 Console.WriteLine();
             }
-            
-            
-
         }
     }
 }
