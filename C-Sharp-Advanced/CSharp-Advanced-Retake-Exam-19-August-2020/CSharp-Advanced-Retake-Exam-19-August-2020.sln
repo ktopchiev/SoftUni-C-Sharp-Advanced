@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_01. Flower Wreaths", "_01. Flower Wreaths\_01. Flower Wreaths.csproj", "{19E433BD-C82A-4992-B6BA-FF1F037A0F1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_02. Bee", "_02. Bee\_02. Bee.csproj", "{FB1DE375-73D1-460E-9618-23D1012F4D7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic", "VetClinic\VetClinic.csproj", "{EE23A67B-5769-4FDE-9BA5-1C19AB5307BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19E433BD-C82A-4992-B6BA-FF1F037A0F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E433BD-C82A-4992-B6BA-FF1F037A0F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E433BD-C82A-4992-B6BA-FF1F037A0F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E433BD-C82A-4992-B6BA-FF1F037A0F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1DE375-73D1-460E-9618-23D1012F4D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1DE375-73D1-460E-9618-23D1012F4D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1DE375-73D1-460E-9618-23D1012F4D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1DE375-73D1-460E-9618-23D1012F4D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE23A67B-5769-4FDE-9BA5-1C19AB5307BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE23A67B-5769-4FDE-9BA5-1C19AB5307BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE23A67B-5769-4FDE-9BA5-1C19AB5307BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE23A67B-5769-4FDE-9BA5-1C19AB5307BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
