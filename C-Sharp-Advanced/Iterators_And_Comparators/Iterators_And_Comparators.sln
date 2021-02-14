@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsAndComparators", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListyIterator", "ListyIterator\ListyIterator.csproj", "{A409BB27-6644-49A1-9AA3-6EF563A660B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{B716683C-987E-4C6D-8C85-A03C71DAAB51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B716683C-987E-4C6D-8C85-A03C71DAAB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B716683C-987E-4C6D-8C85-A03C71DAAB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B716683C-987E-4C6D-8C85-A03C71DAAB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B716683C-987E-4C6D-8C85-A03C71DAAB51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
