@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Library_Iterator
+namespace IteratorsAndComparators
 {
     public class Library : IEnumerable<Book>
     {
@@ -10,7 +10,7 @@ namespace Library_Iterator
 
         public Library(params Book[] books)
         {
-            this.books = books.ToList();
+            this.books = books.OrderBy(b => b.Title).ThenByDescending(b => b.Year).ToList();
         }
         
         public IEnumerator<Book> GetEnumerator()
@@ -25,7 +25,7 @@ namespace Library_Iterator
 
         public void Add(Book book)
         {
-            this.books.Add(book);
+            books.Add(book);
         }
 
         class LibraryIterator : IEnumerator<Book>
