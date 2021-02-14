@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsAndComparators", "IteratorsAndComparators\IteratorsAndComparators.csproj", "{2BC138EF-152C-44B1-8348-5A41ABD6BBDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListyIterator", "ListyIterator\ListyIterator.csproj", "{A409BB27-6644-49A1-9AA3-6EF563A660B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2BC138EF-152C-44B1-8348-5A41ABD6BBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BC138EF-152C-44B1-8348-5A41ABD6BBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BC138EF-152C-44B1-8348-5A41ABD6BBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A409BB27-6644-49A1-9AA3-6EF563A660B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
