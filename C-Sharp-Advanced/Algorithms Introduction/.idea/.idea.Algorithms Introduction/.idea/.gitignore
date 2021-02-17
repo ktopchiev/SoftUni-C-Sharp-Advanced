@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Algorithms Introduction.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\SoftUni\SoftUni-C-Sharp-Advanced\C-Sharp-Advanced\Algorithms Introduction\.idea\.idea.Algorithms Introduction\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
