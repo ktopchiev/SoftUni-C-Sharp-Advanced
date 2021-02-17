@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car_salesman", "Car_salesma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon_trainer", "Pokemon_trainer\Pokemon_trainer.csproj", "{10D996F4-C920-4CDF-809D-C24915EDB348}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniParking", "SoftUni_Parking\SoftUniParking.csproj", "{72BC2E66-6EFC-4565-8C80-042592CE2210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{10D996F4-C920-4CDF-809D-C24915EDB348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D996F4-C920-4CDF-809D-C24915EDB348}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10D996F4-C920-4CDF-809D-C24915EDB348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BC2E66-6EFC-4565-8C80-042592CE2210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BC2E66-6EFC-4565-8C80-042592CE2210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BC2E66-6EFC-4565-8C80-042592CE2210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BC2E66-6EFC-4565-8C80-042592CE2210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
