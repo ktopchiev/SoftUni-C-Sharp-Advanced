@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jagged_Array_Manipulator", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knight_Game", "Knight_Game\Knight_Game.csproj", "{3FE2F60B-02F3-4F2A-93B5-1EB576969408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bombs", "Bombs\Bombs.csproj", "{CC8A63EB-1595-4701-87C6-0A3F083973C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{3FE2F60B-02F3-4F2A-93B5-1EB576969408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE2F60B-02F3-4F2A-93B5-1EB576969408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE2F60B-02F3-4F2A-93B5-1EB576969408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8A63EB-1595-4701-87C6-0A3F083973C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8A63EB-1595-4701-87C6-0A3F083973C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8A63EB-1595-4701-87C6-0A3F083973C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8A63EB-1595-4701-87C6-0A3F083973C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
