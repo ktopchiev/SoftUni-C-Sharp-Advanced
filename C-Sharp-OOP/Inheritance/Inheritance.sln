@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person", "Person\Person.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{C4E9B61E-D9A6-4892-8A1F-810BCDAA8244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Single_Inheritance", "Single_Inheritance\Single_Inheritance.csproj", "{8A1596E3-BBA3-4FCC-949D-FF000101F309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Single_Inheritance", "Single_Inheritance\Single_Inheritance.csproj", "{8A1596E3-BBA3-4FCC-949D-FF000101F309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Players and Monsters", "Players and Monsters\Players and Monsters.csproj", "{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8A1596E3-BBA3-4FCC-949D-FF000101F309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A1596E3-BBA3-4FCC-949D-FF000101F309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A1596E3-BBA3-4FCC-949D-FF000101F309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
