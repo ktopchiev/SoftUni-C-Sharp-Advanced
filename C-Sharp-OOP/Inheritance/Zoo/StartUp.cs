@@ -2,7 +2,7 @@
 
 namespace Zoo
 {
-    class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
