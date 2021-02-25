@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Single_Inheritance", "Singl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Players and Monsters", "Players and Monsters\Players and Monsters.csproj", "{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeedForSpeed", "NeedForSpeed\NeedForSpeed.csproj", "{AC8B7AC4-3D8B-4FC6-9028-A265046E23DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F95B3A7-03FD-4C4E-AC6B-896C8A97A0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8B7AC4-3D8B-4FC6-9028-A265046E23DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8B7AC4-3D8B-4FC6-9028-A265046E23DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8B7AC4-3D8B-4FC6-9028-A265046E23DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8B7AC4-3D8B-4FC6-9028-A265046E23DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
