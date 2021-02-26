@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class Box Data", "Class Box Data\Class Box Data.csproj", "{DC2AFF9E-1834-40D4-9DF0-6CA5BC5BD6A3}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassBoxData", "Class Box Data\ClassBoxData.csproj", "{DC2AFF9E-1834-40D4-9DF0-6CA5BC5BD6A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,11 @@ Global
 		{DC2AFF9E-1834-40D4-9DF0-6CA5BC5BD6A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC2AFF9E-1834-40D4-9DF0-6CA5BC5BD6A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC2AFF9E-1834-40D4-9DF0-6CA5BC5BD6A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {042E34F0-7A29-40A5-8192-F3638586E493}
 	EndGlobalSection
 EndGlobal
