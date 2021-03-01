@@ -13,7 +13,6 @@ namespace PizzaCalories
         private const double sauce = 0.9;
         private double weight;
         private string toppingType;
-        private const string INVALID_WEIGHT = "{0} weight should be in the range [1..50].";
 
         public Topping()
         {
@@ -37,7 +36,7 @@ namespace PizzaCalories
                 }
                 else
                 {
-                    throw new ArgumentException(String.Format(INVALID_WEIGHT, this.toppingType));
+                    throw new ArgumentException($"{toppingType} weight should be in range [1..50].");
                 }
             }
         }
