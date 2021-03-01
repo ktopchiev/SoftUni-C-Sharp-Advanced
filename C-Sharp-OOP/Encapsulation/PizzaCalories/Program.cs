@@ -6,13 +6,10 @@ namespace PizzaCalories
     {
         static void Main(string[] args)
         {
-            int counter = 0;
             Pizza pizza = new Pizza();
 
             while (true)
             {
-                counter++;
-
                 string[] inputCommands = Console.ReadLine().Split(" ");
 
                 if (inputCommands[0] == "END")
