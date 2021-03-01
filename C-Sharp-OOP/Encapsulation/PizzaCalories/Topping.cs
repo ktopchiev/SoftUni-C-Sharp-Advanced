@@ -6,7 +6,7 @@ namespace PizzaCalories
 {
     public class Topping
     {
-        private const double baseCalories = 2;
+        private const double baseCalories = 2.0;
         private const double meat = 1.2;
         private const double veggies = 0.8;
         private const double cheese = 1.1;

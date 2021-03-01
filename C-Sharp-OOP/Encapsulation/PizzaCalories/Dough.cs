@@ -13,7 +13,7 @@ namespace PizzaCalories
             homemade = 1.0;
 
         private const double baseCalories = 2;
-        private double weight = 0.0;
+        private double weight;
         private string flourType;
         private string bakingTechnique;
 
