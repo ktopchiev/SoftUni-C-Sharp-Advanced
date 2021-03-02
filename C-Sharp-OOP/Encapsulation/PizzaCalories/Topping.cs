@@ -6,11 +6,14 @@ namespace PizzaCalories
 {
     public class Topping
     {
-        private const double baseCalories = 2;
-        private const double meat = 1.2;
-        private const double veggies = 0.8;
-        private const double cheese = 1.1;
-        private const double sauce = 0.9;
+        private const double MinRange = 1;
+        private const double MaxRange = 50;
+        private const double BaseCalories = 2;
+        private const double Meat = 1.2;
+        private const double Veggies = 0.8;
+        private const double Cheese = 1.1;
+        private const double Sauce= 0.9;
+
         private double weight;
         private string toppingType;
 
@@ -30,14 +33,12 @@ namespace PizzaCalories
         {
             set
             {
-                if (value >= 1 && value <= 50)
-                {
-                    weight = value;
-                }
-                else
-                {
-                    throw new ArgumentException($"{toppingType} weight should be in range [1..50].");
-                }
+                Validator.ThrowIfNumberIsNotInRange(MinRange,
+                    MaxRange,
+                    value,
+                    $"{toppingType} weight should be in range [{MinRange}..{MaxRange}].");
+                
+                weight = value;
             }
         }
 
@@ -45,10 +46,9 @@ namespace PizzaCalories
         {
             set
             {
-                if (value.ToLower() != "meat" && value.ToLower() != "veggies" && value.ToLower() != "cheese" && value.ToLower() != "sauce")
-                {
-                    throw new ArgumentException($"Cannot place {value} on top of your pizza.");
-                }
+                Validator.ThrowIfValueIsNotAllowed(new HashSet<string>{ "meat", "cheese", "veggies", "sauce"},
+                    value.ToLower(),
+                    $"Cannot place {value} on top of your pizza.");
 
                 toppingType = value;
             }
@@ -61,22 +61,22 @@ namespace PizzaCalories
             switch (toppingType.ToLower())
             {
                 case "meat":
-                    toppingCalories = meat;
+                    toppingCalories = Meat;
                     break;
                 case "veggies":
-                    toppingCalories = veggies;
+                    toppingCalories = Veggies;
                     break;
                 case "cheese":
-                    toppingCalories = cheese;
+                    toppingCalories = Cheese;
                     break;
                 case "sauce":
-                    toppingCalories = sauce;
+                    toppingCalories = Sauce;
                     break;
                 default:
                     break;
             }
 
-            return baseCalories * toppingCalories * weight;
+            return BaseCalories * toppingCalories * weight;
         }
     }
 }

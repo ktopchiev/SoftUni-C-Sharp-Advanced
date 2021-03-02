@@ -50,6 +50,7 @@ namespace PizzaCalories
                     }
                 }
                 catch (Exception ex)
+                    when(ex is ArgumentException || ex is InvalidOperationException)
                 {
                     Console.WriteLine(ex.Message);
                     break;

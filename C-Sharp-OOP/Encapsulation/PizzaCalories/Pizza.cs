@@ -6,6 +6,7 @@ namespace PizzaCalories
 {
     public class Pizza
     {
+        private const int MaxCount = 10;
         private string name;
         private Dough dough;
         private List<Topping> toppings;
@@ -56,9 +57,9 @@ namespace PizzaCalories
 
         public void AddTopping(Topping topping)
         {
-            if (toppingsCount == 10)
+            if (toppingsCount == MaxCount)
             {
-                throw new ArgumentException("Number of toppings should be in range [0..10].");
+                throw new InvalidOperationException($"Number of toppings should be in range [0..{MaxCount}].");
             }
 
             toppings.Add(topping);

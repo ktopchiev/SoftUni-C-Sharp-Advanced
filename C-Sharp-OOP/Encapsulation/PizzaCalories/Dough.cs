@@ -6,13 +6,17 @@ namespace PizzaCalories
 {
     public class Dough
     {
-        private const double white = 1.5,
-            wholegrain = 1.0,
-            crispy = 0.9,
-            chewy = 1.1,
-            homemade = 1.0;
+        private const double MinRange = 1;
+        private const double MaxRange = 200;
 
-        private const double baseCalories = 2;
+        private const double White = 1.5,
+            Wholegrain = 1.0,
+            Crispy = 0.9,
+            Chewy = 1.1,
+            Homemade = 1.0;
+        private const double BaseCalories = 2;
+        private const string InvalidTypeMessage = "Invalid type of dough.";
+
         private double weight;
         private string flourType;
         private string bakingTechnique;
@@ -34,14 +38,9 @@ namespace PizzaCalories
         {
             set
             {
-                if (value >= 1 && value <= 200)
-                {
-                    weight = value;
-                }
-                else
-                {
-                    throw new ArgumentException("Dough weight should be in the range [1..200].");
-                }
+                Validator.ThrowIfNumberIsNotInRange(MinRange, MaxRange, value, $"Dough weight should be in the range[{MinRange}..{MaxRange}].");
+
+                weight = value;
             }
         }
 
@@ -49,10 +48,7 @@ namespace PizzaCalories
         {
             set
             {
-                if (value.ToLower() != "white" && value.ToLower() != "wholegrain")
-                {
-                    throw new ArgumentException("Invalid type of dough.");
-                }
+                Validator.ThrowIfValueIsNotAllowed(new HashSet<string> { "white", "wholegrain"}, value.ToLower(), InvalidTypeMessage);
 
                 flourType = value;
             }
@@ -62,10 +58,7 @@ namespace PizzaCalories
         {
             set
             {
-                if (value.ToLower() != "crispy" && value.ToLower() != "chewy" && value.ToLower() != "homemade")
-                {
-                    throw new ArgumentException("Invalid type of dough.");
-                }
+                Validator.ThrowIfValueIsNotAllowed(new HashSet<string> { "crispy", "chewy", "homemade" }, value.ToLower(), InvalidTypeMessage);
 
                 bakingTechnique = value;
             }
@@ -79,10 +72,10 @@ namespace PizzaCalories
             switch (flourType.ToLower())
             {
                 case "white":
-                    flourTypeValue = white; 
+                    flourTypeValue = White; 
                     break;
                 case "wholegrain":
-                    flourTypeValue = wholegrain;
+                    flourTypeValue = Wholegrain;
                     break;
                 default:
                     break;
@@ -91,20 +84,20 @@ namespace PizzaCalories
             switch (bakingTechnique.ToLower())
             {
                 case "crispy":
-                    bakingTechniqueValue = crispy;
+                    bakingTechniqueValue = Crispy;
                     break;
                 case "chewy":
-                    bakingTechniqueValue = chewy;
+                    bakingTechniqueValue = Chewy;
                     break;
                 case "homemade":
-                    bakingTechniqueValue = homemade;
+                    bakingTechniqueValue = Homemade;
                     break;
                 default:
                     break;
 
             }
 
-            return (baseCalories * weight) * flourTypeValue * bakingTechniqueValue;
+            return (BaseCalories * weight) * flourTypeValue * bakingTechniqueValue;
         }
     }
 }
