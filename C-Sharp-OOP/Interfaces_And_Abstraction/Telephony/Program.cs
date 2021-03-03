@@ -21,7 +21,7 @@ namespace Telephony
                 }
                 else
                 {
-                    Console.WriteLine("Invalid number!");
+                    Console.WriteLine("Invalid number");
                 }
             }
 
@@ -31,14 +31,9 @@ namespace Telephony
 
             foreach (var url in urls)
             {
-                if (url.Length > 0)
-                {
-                    smartphone.Browsing(url);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid URL!");
-                }
+                
+                smartphone.Browsing(url);
+                
             }
         }
     }

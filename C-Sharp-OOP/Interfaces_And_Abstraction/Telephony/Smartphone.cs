@@ -15,7 +15,7 @@ namespace Telephony
 
         public void Browsing(string url)
         {
-            if (IsContainDigits(url))
+            if (IsContainDigits(url) || url.Length == 0)
             {
                 Console.WriteLine("Invalid URL!");
             }
