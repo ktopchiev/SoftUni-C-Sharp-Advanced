@@ -8,7 +8,7 @@ namespace BorderControl
     {
         static void Main(string[] args)
         {
-            List<IIdentifiable> city = new List<IIdentifiable>();
+            List<IBirthable> city = new List<IBirthable>();
 
             while (true)
             {
@@ -16,23 +16,27 @@ namespace BorderControl
 
                 if (enteringIdentifiable[0] == "End")
                 {
-                    string fakeId = Console.ReadLine();
+                    string birthYear = Console.ReadLine();
 
-                    city.Where(x => x.Id.EndsWith(fakeId))
-                        .Select(x => x.Id)
+                    city.Where(x => x.Birthdate.EndsWith(birthYear))
+                        .Select(x => x.Birthdate)
                         .ToList()
                         .ForEach(Console.WriteLine);
 
                     break;
                 }
 
-                switch(enteringIdentifiable.Length)
+                switch(enteringIdentifiable[0])
                 {
-                    case 3:
-                        city.Add(new Citizen(enteringIdentifiable[0], enteringIdentifiable[2], int.Parse(enteringIdentifiable[1])));
+                    case "Citizen":
+                        city.Add(new Citizen(enteringIdentifiable[1],
+                            enteringIdentifiable[3],
+                            int.Parse(enteringIdentifiable[2]),
+                            enteringIdentifiable[4]));
                         break;
-                    case 2:
-                        city.Add(new Robot(enteringIdentifiable[0], enteringIdentifiable[1]));
+                    case "Pet":
+                        city.Add(new Pet(enteringIdentifiable[1],
+                            enteringIdentifiable[2]));
                         break;
                 }
             }

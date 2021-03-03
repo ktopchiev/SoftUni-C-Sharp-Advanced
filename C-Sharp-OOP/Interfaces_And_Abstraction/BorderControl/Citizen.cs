@@ -4,17 +4,19 @@ using System.Text;
 
 namespace BorderControl
 {
-    public class Citizen : IIdentifiable
+    public class Citizen : IIdentifiable, IBirthable
     {
         private string name;
         private string id;
         private int age;
+        private string birthdate;
 
-        public Citizen(string name, string id, int age)
+        public Citizen(string name, string id, int age, string birthdate)
         {
             Name = name;
             Id = id;
             Age = age;
+            Birthdate = birthdate;
         }
 
         public string Name
@@ -46,5 +48,6 @@ namespace BorderControl
             }
         }
 
+        public string Birthdate { get => birthdate; private set => birthdate = value; }
     }
 }
