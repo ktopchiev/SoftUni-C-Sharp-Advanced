@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ShoppingSpree
 {
@@ -10,56 +11,49 @@ namespace ShoppingSpree
         static void Main(string[] args)
         {
             //Get the input
-            var people = Console.ReadLine().Split(new [] {';', '='}, StringSplitOptions.RemoveEmptyEntries);
-            var products = Console.ReadLine().Split(new[] { ';', '=' }, StringSplitOptions.RemoveEmptyEntries);
+            var inputPersons = Console.ReadLine().Split(";");
+            var inputProducts = Console.ReadLine().Split(";");
 
-            Queue<string> peopleQ = new Queue<string>(people);
-            Queue<string> productsQ = new Queue<string>(products);
+            Dictionary<string, int> peopleData = GetData(inputPersons);
+            Dictionary<string, int> productsData = GetData(inputProducts);
 
             List<Person> peopleList = new List<Person>();
             List<Product> productsList = new List<Product>();
 
             bool exception = false;
 
-            //Fill lists with people and products
-            while(peopleQ.Count > 0 && exception == false)
-            { 
+            //Fill lists with persons and products
+            foreach (var person in peopleData)
+            {
                 try
-                {   
-                    var isDigit = 0.0;
-                    var name = double.TryParse(peopleQ.Peek(), out isDigit) ? null : peopleQ.Dequeue();
-                    var money = peopleQ.Count > 0 ? double.Parse(peopleQ.Dequeue()) : 0;
-
-                    Person newPerson = new Person(name, money);
+                {
+                    Person newPerson = new Person(person.Key, person.Value);
                     peopleList.Add(newPerson);
                 }
                 catch (Exception ex)
                 {
-
                     Console.WriteLine(ex.Message);
-                    exception = true;
-                }
+                    break;
+                }   
             }
 
-            while(productsQ.Count > 0 && exception == false)
+            foreach (var product in productsData)
             {
                 try
                 {
-                    var isDigit = 0.0;
-                    var product = double.TryParse(productsQ.Peek(), out isDigit) ? null : productsQ.Dequeue();
-                    var cost = productsQ.Count > 0 ? double.Parse(productsQ.Dequeue()) : 0;
-
-                    Product newProduct = new Product(product, cost);
-
+                    Product newProduct = new Product(product.Key, product.Value);
                     productsList.Add(newProduct);
                 }
                 catch (Exception ex)
-                {
-
+                { 
                     Console.WriteLine(ex.Message);
-                    exception = true;
+                    break;
                 }
+                
             }
+
+            
+            
 
             //Buying products
             if (exception == false)
@@ -71,6 +65,31 @@ namespace ShoppingSpree
             
         }
 
+        private static Dictionary<string,int> GetData(string[] inputData)
+        {
+            Dictionary<string, int> newDictionary = new Dictionary<string, int>();
+
+            foreach (var item in inputData)
+            {
+                Regex regex = new Regex(@"([A-z])\w+");
+                MatchCollection name = regex.Matches(item);
+
+                Regex rgx = new Regex(@"\d+");
+                MatchCollection number = rgx.Matches(item);
+
+                if (name.Count != 0 && number.Count != 0)
+                {
+                    newDictionary.Add(name[0].ToString(), int.Parse(number[0].ToString()));
+                }
+                else if (name.Count == 0)
+                {
+                    newDictionary.Add(" ", 0);
+                }
+                
+            }
+
+            return newDictionary;
+        }
 
         private static List<Person> BuyProducts(List<Person> peopleList, List<Product> productsList)
         {
@@ -99,6 +118,7 @@ namespace ShoppingSpree
                     {
 
                         Console.WriteLine(ex.Message);
+                        break;
                     }
                 }
             }
@@ -112,7 +132,7 @@ namespace ShoppingSpree
 
             foreach (var person in peopleList)
             {
-                sb.Append($"{person.Name} - ");
+                sb.Append($"{person.Name.Trim()} - ");
 
                 if (person.BagOfProducts.Count == 0)
                 {
@@ -125,6 +145,7 @@ namespace ShoppingSpree
                     foreach (var product in person.BagOfProducts)
                     {
                         counter++;
+
                         if (counter == person.BagOfProducts.Count)
                         {
                             sb.Append($"{product.Name}");
@@ -134,12 +155,12 @@ namespace ShoppingSpree
                             sb.Append($"{product.Name}, ");
                         }
                     }
-                }
 
-                sb.AppendLine();
+                    sb.AppendLine();
+                }
             }
 
-            Console.WriteLine(sb.ToString().TrimEnd());
+            Console.WriteLine(sb.ToString().Trim());
         }
     }
 }
