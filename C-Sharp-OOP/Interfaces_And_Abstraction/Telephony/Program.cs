@@ -2,11 +2,44 @@
 
 namespace Telephony
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] numbers = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries);
+            ICallable stationaryPhone = new StationaryPhone();
+
+            foreach (var number in numbers)
+            {
+                if (number.Length == 7)
+                {
+                    stationaryPhone.Dialing(number);
+                }
+                else if (number.Length == 10)
+                {
+                    stationaryPhone.Calling(number);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid number!");
+                }
+            }
+
+            string[] urls = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+            IBrowsable smartphone = new Smartphone();
+
+            foreach (var url in urls)
+            {
+                if (url.Length > 0)
+                {
+                    smartphone.Browsing(url);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid URL!");
+                }
+            }
         }
     }
 }
