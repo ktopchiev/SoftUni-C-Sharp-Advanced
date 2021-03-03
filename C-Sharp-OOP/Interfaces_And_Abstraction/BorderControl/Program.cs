@@ -18,15 +18,7 @@ namespace BorderControl
                 {
                     string fakeId = Console.ReadLine();
 
-                    var detainedsList = city.Where(x => x.Id.EndsWith(fakeId)).Select(x => x.Id).ToList();
-
-                    if (detainedsList.Count > 0)
-                    {
-                        foreach (var identifiable in detainedsList)
-                        {
-                            Console.WriteLine(identifiable);
-                        }
-                    }
+                    city.Where(x => x.Id.EndsWith(fakeId)).Select(x => x.Id).ToList().ForEach(Console.WriteLine);
                     break;
                 }
 
