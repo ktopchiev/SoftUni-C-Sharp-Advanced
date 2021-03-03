@@ -18,7 +18,11 @@ namespace BorderControl
                 {
                     string fakeId = Console.ReadLine();
 
-                    city.Where(x => x.Id.EndsWith(fakeId)).Select(x => x.Id).ToList().ForEach(Console.WriteLine);
+                    city.Where(x => x.Id.EndsWith(fakeId))
+                        .Select(x => x.Id)
+                        .ToList()
+                        .ForEach(Console.WriteLine);
+
                     break;
                 }
 
