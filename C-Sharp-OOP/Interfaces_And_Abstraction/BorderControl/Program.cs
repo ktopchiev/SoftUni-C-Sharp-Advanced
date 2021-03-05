@@ -8,37 +8,75 @@ namespace BorderControl
     {
         static void Main(string[] args)
         {
-            List<IBirthable> city = new List<IBirthable>();
+            
+            List<IBuyer> buyers = new List<IBuyer>();             
 
-            while (true)
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
             {
                 string[] enteringIdentifiable = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (enteringIdentifiable[0] == "End")
+                switch (enteringIdentifiable.Length)
                 {
-                    string birthYear = Console.ReadLine();
+                    case 4:
+                        if (!buyers.Any(x => x.Name == enteringIdentifiable[0]))
+                        {
+                            buyers.Add(new Citizen(enteringIdentifiable[0],
+                                enteringIdentifiable[2],
+                                int.Parse(enteringIdentifiable[1]),
+                                enteringIdentifiable[3]));
+                        }
+                        break;
+                    case 3:
+                        if (!buyers.Any(x => x.Name == enteringIdentifiable[0]))
+                        {
+                            buyers.Add(new Rebel(enteringIdentifiable[0],
+                                int.Parse(enteringIdentifiable[1]),
+                                enteringIdentifiable[2]));
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
 
-                    city.Where(x => x.Birthdate.EndsWith(birthYear))
-                        .Select(x => x.Birthdate)
-                        .ToList()
-                        .ForEach(Console.WriteLine);
 
+            while (true)
+            {
+                string name = Console.ReadLine();
+
+                if (name == "End")
+                {
+                    //string birthYear = Console.ReadLine();
+
+                    //city.Where(x => x.Birthdate.EndsWith(birthYear))
+                    //    .Select(x => x.Birthdate)
+                    //    .ToList()
+                    //    .ForEach(Console.WriteLine);
+                    Console.WriteLine(buyers.Sum(x => x.Food));
                     break;
                 }
 
-                switch(enteringIdentifiable[0])
+
+                foreach (var person in buyers.Where(p => p.Name == name))
                 {
-                    case "Citizen":
-                        city.Add(new Citizen(enteringIdentifiable[1],
-                            enteringIdentifiable[3],
-                            int.Parse(enteringIdentifiable[2]),
-                            enteringIdentifiable[4]));
-                        break;
-                    case "Pet":
-                        city.Add(new Pet(enteringIdentifiable[1],
-                            enteringIdentifiable[2]));
-                        break;
+                    person.BuyFood();
                 }
+                //switch(enteringIdentifiable[0])
+                //{
+                //    case "Citizen":
+                //        city.Add(new Citizen(enteringIdentifiable[1],
+                //            enteringIdentifiable[3],
+                //            int.Parse(enteringIdentifiable[2]),
+                //            enteringIdentifiable[4]));
+                //        break;
+                //    case "Pet":
+                //        city.Add(new Pet(enteringIdentifiable[1],
+                //            enteringIdentifiable[2]));
+                //        break;
+
+                //}
             }
         }
     }
