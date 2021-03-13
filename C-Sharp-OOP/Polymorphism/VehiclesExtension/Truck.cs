@@ -18,9 +18,23 @@ namespace VehiclesExtension
             return $"{GetType().Name} {base.Drive(distance)}";
         }
 
-        public override void Refuel(double fuel)
+        public override void Refuel(double fuelAmountToFill)
         {
-            base.Refuel(fuel);
+            if (fuelAmountToFill > 0)
+            {
+                if (fuelAmountToFill + fuelQuantity <= tankCapacity)
+                {
+                    fuelQuantity += fuelAmountToFill * 0.95;
+                }
+                else
+                {
+                    Console.WriteLine($"Cannot fit {fuelAmountToFill} fuel in the tank");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Fuel must be a positive number");
+            }
         }
     }
 }

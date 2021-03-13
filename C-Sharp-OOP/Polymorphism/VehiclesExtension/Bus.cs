@@ -15,14 +15,18 @@ namespace VehiclesExtension
 
         public string DriveFull(double distance)
         {
+            //Console.WriteLine(fuelConsumption);
             fuelConsumption += 1.4;
             var drive = base.Drive(distance);
+            //Console.WriteLine(fuelConsumption);
             fuelConsumption -= 1.4;
+            //Console.WriteLine(fuelConsumption);
             return $"{GetType().Name} {drive}";
         }
 
         public override string Drive(double distance)
         {
+            //Console.WriteLine(fuelConsumption);
             return $"{GetType().Name} {base.Drive(distance)}";
         }
     }
