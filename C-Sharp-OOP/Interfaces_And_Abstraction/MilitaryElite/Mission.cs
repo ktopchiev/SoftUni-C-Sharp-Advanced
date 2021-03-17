@@ -7,8 +7,6 @@ namespace MilitaryElite
 {
     public class Mission : IMission
     {
-        private string state;
-        private string codeName;
 
         private Mission(string codeName, string state)
         {
@@ -16,31 +14,9 @@ namespace MilitaryElite
             CodeName = codeName;
         }
 
-        public string CodeName
-        {
-            get => codeName;
+        public string CodeName { get; set; }
 
-            private set
-            {
-                if (state == "inProgress" || state == "Finished")
-                {
-                    codeName = value;
-                }
-            }
-        }
-
-        public string State
-        {
-            get => state;
-
-            private set
-            {
-                if (value == "inProgress" || value == "Finished")
-                {
-                    state = value;
-                }
-            }
-        }
+        public string State { get; set; }
 
         public static Mission Create(string codeName, string state)
         {
@@ -59,7 +35,7 @@ namespace MilitaryElite
 
         public override string ToString()
         {
-            return $"Code Name: {CodeName} State: {state}";
+            return $"Code Name: {CodeName} State: {State}";
         }
     }
 }
