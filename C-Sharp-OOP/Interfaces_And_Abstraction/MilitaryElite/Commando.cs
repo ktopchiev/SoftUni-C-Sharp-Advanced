@@ -15,7 +15,7 @@ namespace MilitaryElite
             Missions = new List<Mission>();
         }
 
-        public List<Mission> Missions { get; set; }
+        public List<Mission> Missions { get; private set; }
 
         //Factory pattern
         public static Commando NewCommando(int id, string firstName, string lastName, decimal salary, string corps)
@@ -43,7 +43,7 @@ namespace MilitaryElite
             {
                 foreach (var mission in Missions.Where(x => x != null))
                 {
-                    sb.Append("  ").Append($"{mission.ToString()}");
+                    sb.Append("  ").Append($"{mission}").AppendLine();
                 }
             }
 

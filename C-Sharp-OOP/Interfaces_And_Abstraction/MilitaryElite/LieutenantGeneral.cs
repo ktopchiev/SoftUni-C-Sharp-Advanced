@@ -27,7 +27,7 @@ namespace MilitaryElite
 
                 if (PrivatesIds.Contains(soldier.Id))
                 {
-                    privates.Add(souja);
+                    privates.Insert(0, souja);
                 }
             }
         }

@@ -34,10 +34,13 @@ namespace MilitaryElite
                     case "engineer":
                         Engineer engineer = Engineer.NewEngineer(int.Parse(input[1]), input[2], input[3], decimal.Parse(input[4]), input[5]);
 
-                        for (int i = 6; i < input.Length; i += 2)
+                        if (engineer != null)
                         {
-                            Repair repair = new Repair(input[i], int.Parse(input[i + 1]));
-                            engineer.AddRepair(repair);
+                            for (int i = 6; i < input.Length; i += 2)
+                            {
+                                Repair repair = new Repair(input[i], int.Parse(input[i + 1]));
+                                engineer.AddRepair(repair);
+                            }
                         }
 
                         soldiers.Add(engineer);
@@ -45,10 +48,13 @@ namespace MilitaryElite
                     case "commando":
                         Commando commando = Commando.NewCommando(int.Parse(input[1]), input[2], input[3], decimal.Parse(input[4]), input[5]);
 
-                        for (int i = 6; i < input.Length; i += 2)
+                        if (commando != null)
                         {
-                            Mission mission = Mission.Create(input[i], input[i + 1]);
-                            commando.AddMission(mission);
+                            for (int i = 6; i < input.Length; i += 2)
+                            {
+                                Mission mission = Mission.Create(input[i], input[i + 1]);
+                                commando.AddMission(mission);
+                            }
                         }
 
                         soldiers.Add(commando);
@@ -62,7 +68,10 @@ namespace MilitaryElite
                 }
             }
 
-            soldiers.ForEach(Console.WriteLine);
+            if (soldiers.Count > 0)
+            {
+                soldiers.ForEach(Console.WriteLine);
+            }
         }
     }
 }

@@ -14,9 +14,9 @@ namespace MilitaryElite
             CodeName = codeName;
         }
 
-        public string CodeName { get; set; }
+        public string CodeName { get; private set; }
 
-        public string State { get; set; }
+        public string State { get; private set; }
 
         public static Mission Create(string codeName, string state)
         {
