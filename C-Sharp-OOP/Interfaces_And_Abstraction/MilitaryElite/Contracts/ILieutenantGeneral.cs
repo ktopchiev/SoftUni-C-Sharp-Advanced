@@ -6,6 +6,6 @@ namespace MilitaryElite.Contracts
 {
     public interface ILieutenantGeneral
     {
-        public HashSet<int> PrivatesIds { get; set; }
+        void AddPrivate(IPrivate @private);
     }
 }

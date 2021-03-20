@@ -13,12 +13,12 @@ namespace MilitaryElite
             HoursWorked = hoursWorked;
         }
 
-        public string PartName { get; set; }
-        public int HoursWorked { get; set; }
+        public string PartName { get; private set; }
+        public int HoursWorked { get; private set; }
 
         public override string ToString()
         {
-            return $"Part Name: {PartName} Hours Worked: {HoursWorked}";
+            return ($"Part Name: {PartName} Hours Worked: {HoursWorked}").TrimEnd();
         }
     }
 }

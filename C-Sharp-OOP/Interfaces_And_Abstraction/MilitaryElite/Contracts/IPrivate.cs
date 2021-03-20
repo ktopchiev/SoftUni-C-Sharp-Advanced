@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MilitaryElite.Contracts
 {
-    public interface IPrivate
+    public interface IPrivate : ISoldier
     {
-        public decimal Salary { get; set; }
+        public decimal Salary { get; }
 
     }
 }

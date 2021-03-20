@@ -18,7 +18,7 @@ namespace MilitaryElite
         public override string ToString()
         {
             return ($"{base.ToString()}{Environment.NewLine}" +
-                $"Code Number: {CodeNumber}").Trim();
+                $"Code Number: {CodeNumber}").TrimEnd();
         }
     }
 }

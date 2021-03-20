@@ -4,8 +4,10 @@ using System.Text;
 
 namespace MilitaryElite.Contracts
 {
-    public interface ICommando
+    public interface ICommando : ISpecialSoldier
     {
-        public List<Mission> Missions { get; }
+        public IReadOnlyList<IMission> Missions { get; }
+
+        void AddMission(IMission mission);
     }
 }

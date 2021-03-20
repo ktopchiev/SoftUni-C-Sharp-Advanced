@@ -20,7 +20,7 @@ namespace MilitaryElite
 
         public override string ToString()
         {
-            return $"Name: {FirstName} {LastName} Id: {Id}";
+            return ($"Name: {FirstName} {LastName} Id: {Id}").TrimEnd();
         }
     }
 }
