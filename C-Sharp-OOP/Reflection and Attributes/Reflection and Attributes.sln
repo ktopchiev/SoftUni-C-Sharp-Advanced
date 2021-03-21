@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stealer", "Stealer\Stealer.csproj", "{FED01AD3-E645-44F9-8E77-0CB5879D6B9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stealer", "Stealer\Stealer.csproj", "{FED01AD3-E645-44F9-8E77-0CB5879D6B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAttribute", "CreateAttribute\CreateAttribute.csproj", "{10866FB6-8998-4835-BCEE-FF3D30CC179C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FED01AD3-E645-44F9-8E77-0CB5879D6B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FED01AD3-E645-44F9-8E77-0CB5879D6B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FED01AD3-E645-44F9-8E77-0CB5879D6B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10866FB6-8998-4835-BCEE-FF3D30CC179C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10866FB6-8998-4835-BCEE-FF3D30CC179C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10866FB6-8998-4835-BCEE-FF3D30CC179C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10866FB6-8998-4835-BCEE-FF3D30CC179C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
