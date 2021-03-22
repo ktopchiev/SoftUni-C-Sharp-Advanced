@@ -11,8 +11,11 @@ namespace ValidationAttributes
     {
         public static bool IsValid(object obj)
         {
+            //Get the object's properties
             PropertyInfo[] properties = obj.GetType().GetProperties();
 
+
+            //Get through each property and get his attributes
             foreach (var property in properties)
             {
                 MyValidationAttribute[] attributes = property.GetCustomAttributes()
@@ -20,10 +23,12 @@ namespace ValidationAttributes
                     .Cast<MyValidationAttribute>()
                     .ToArray();
 
+                //Get object's current property value
                 object value = property.GetValue(obj);
 
                 foreach (var attribute in attributes)
                 {
+                    //Check if object's value is valid with his attributes
                     bool isValid = attribute.IsValid(value);
 
                     if (!isValid)
