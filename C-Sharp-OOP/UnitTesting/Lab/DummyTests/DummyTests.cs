@@ -22,7 +22,7 @@ namespace DummyTests
         {
             Dummy dummy = new Dummy(0, 100);
 
-            Assert.Throws<InvalidOperationException>(() => dummy.TakeAttack(1));
+            Assert.Throws<InvalidOperationException>(() => dummy.TakeAttack(1), "Dummy does not throw exception if attacked when is dead.");
         }
 
         [Test]
@@ -30,7 +30,7 @@ namespace DummyTests
         {
             Dummy dummy = new Dummy(0, 100);
 
-            Assert.That(dummy.GiveExperience, Is.EqualTo(100));
+            Assert.That(dummy.GiveExperience, Is.EqualTo(100), "Dummy cannot give experience when is dead.");
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace DummyTests
         {
             Dummy dummy = new Dummy(100, 100);
 
-            Assert.Throws<InvalidOperationException>(() => dummy.GiveExperience());
+            Assert.Throws<InvalidOperationException>(() => dummy.GiveExperience(), "Dummy can give experience when is alive.");
         }
     }
 }
