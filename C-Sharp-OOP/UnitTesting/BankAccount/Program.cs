@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Test_Axe
+namespace BankAccount
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
