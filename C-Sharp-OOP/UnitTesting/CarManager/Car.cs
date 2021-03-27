@@ -34,7 +34,7 @@ namespace CarManager
                 return this.make;
             }
             private set
-            {
+            {       
                 if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException("Make cannot be null or empty!");
