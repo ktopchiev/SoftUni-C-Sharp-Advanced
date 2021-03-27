@@ -6,7 +6,7 @@ namespace Tests
 {
     public class ExtendedDatabaseTests
     {
-        private ExtendedDatabase.ExtendedDatabase database;
+        private ExtendedDatabase database;
         private string username;
         private Person person;
 
@@ -15,7 +15,7 @@ namespace Tests
         {
             username = "username";
             person = new Person(1, username);
-            database = new ExtendedDatabase.ExtendedDatabase(person);
+            database = new ExtendedDatabase(person);
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace Tests
                 persons[i] = new Person(i, $"username{i}");
             }
 
-            database = new ExtendedDatabase.ExtendedDatabase(persons);
+            database = new ExtendedDatabase(persons);
 
             Assert.That(database.Count == 16);
         }
@@ -43,14 +43,14 @@ namespace Tests
                 persons[i] = new Person(i, $"username{i}");
             }
 
-            Assert.Throws<ArgumentException>(() => database = new ExtendedDatabase.ExtendedDatabase(persons));
+            Assert.Throws<ArgumentException>(() => database = new ExtendedDatabase(persons));
         }
 
         [Test]
         public void When_AddToDatabase_Should_IncreaseCountOfPersons()
         {
 
-            database = new ExtendedDatabase.ExtendedDatabase(new Person(2, "johnDoe"));
+            database = new ExtendedDatabase(new Person(2, "johnDoe"));
 
             database.Add(person);
 
@@ -68,7 +68,7 @@ namespace Tests
                 fullPersons[i] = new Person(i, $"username{i}");
             }
 
-            ExtendedDatabase.ExtendedDatabase fullDatabase = new ExtendedDatabase.ExtendedDatabase(fullPersons);
+            ExtendedDatabase fullDatabase = new ExtendedDatabase(fullPersons);
 
             Assert.Throws<InvalidOperationException>(() => fullDatabase.Add(person));
         }
@@ -97,7 +97,7 @@ namespace Tests
         [Test]
         public void When_RemoveFromEmptyDatabase_Should_ThrowException()
         {
-            database = new ExtendedDatabase.ExtendedDatabase();
+            database = new ExtendedDatabase();
 
             Assert.Throws<InvalidOperationException>(() => database.Remove());
         }
@@ -109,9 +109,10 @@ namespace Tests
         }
 
         [Test]
-        public void When_FindByUsernameReceivedArgumentIsNullOrEmpty_Should_ThrowException()
+        [TestCase("")]
+        [TestCase(null)]
+        public void When_FindByUsernameReceivedArgumentIsNullOrEmpty_Should_ThrowException(string username)
         {
-            username = null;
             Assert.Throws<ArgumentNullException>(() => database.FindByUsername(username));
         }
         
