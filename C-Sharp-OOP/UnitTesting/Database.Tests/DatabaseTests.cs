@@ -6,12 +6,12 @@ namespace Tests
     [TestFixture]
     public class DatabaseTests
     {
-        private Database.Database database;
+        private Database database;
 
         [SetUp]
         public void Setup()
         {
-            database = new Database.Database();
+            database = new Database();
         }
 
         [Test]
@@ -19,7 +19,7 @@ namespace Tests
         {
             int[] nums = { 1, 2, 3, 4, 5 };
 
-            database = new Database.Database(nums);
+            database = new Database(nums);
 
             Assert.That(database.Count, Is.EqualTo(nums.Length));
         }
@@ -37,7 +37,7 @@ namespace Tests
         {
             int[] nums = {1, 2, 3};
 
-            database = new Database.Database(nums);
+            database = new Database(nums);
 
             Assert.That(database.Count, Is.EqualTo(3));
         }
@@ -56,7 +56,7 @@ namespace Tests
         [Test]
         public void When_RemoveFromDatabase_Should_DecreaseCount()
         {
-            database = new Database.Database(1);
+            database = new Database(1);
 
             database.Remove();
 
@@ -74,7 +74,7 @@ namespace Tests
         {
             int[] nums = {1, 3, 5};
 
-            database = new Database.Database(nums);
+            database = new Database(nums);
 
             Assert.That(database.Fetch, Is.EquivalentTo(nums));
         }
