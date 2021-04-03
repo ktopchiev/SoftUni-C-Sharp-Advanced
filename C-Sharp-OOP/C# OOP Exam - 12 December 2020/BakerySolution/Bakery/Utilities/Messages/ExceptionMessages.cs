@@ -12,8 +12,9 @@
 
         public const string InvalidTableCapacity = "Capacity has to be greater than 0";
 
-        public const string InvalidNumberOfPeople = "Cannot place zero or less people!";
+        public const string InvalidTableNumber = "Table with number {0} was not found.";
 
+        public const string InvalidNumberOfPeople = "Cannot place zero or less people!";
 
     }
 }

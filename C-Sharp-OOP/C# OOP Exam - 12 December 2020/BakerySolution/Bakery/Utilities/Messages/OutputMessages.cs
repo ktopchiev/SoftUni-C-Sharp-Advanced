@@ -20,6 +20,8 @@
 
         public const string NonExistentDrink = "There is no {0} {1} available";
 
+        public const string DrinkOrderSuccessful = "Table {0} ordered {1} {2}";
+
         public const string TotalIncome = "Total income: {0:F2}lv";
     }
 }
