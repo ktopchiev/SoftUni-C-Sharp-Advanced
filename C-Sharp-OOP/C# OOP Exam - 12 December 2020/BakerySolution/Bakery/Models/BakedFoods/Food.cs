@@ -2,15 +2,15 @@
 using Bakery.Utilities.Messages;
 using System;
 
-namespace Bakery.Models.BakedFoods.Entities
+namespace Bakery.Models.BakedFoods
 {
-    public abstract class BakedFood : IBakedFood
+    public abstract class Food : IBakedFood
     {
         private string name;
         private int portion;
         private decimal price;
 
-        public BakedFood(string name, int portion, decimal price)
+        public Food(string name, int portion, decimal price)
         {
             Name = name;
             Portion = portion;

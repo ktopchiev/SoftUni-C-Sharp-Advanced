@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bakery.Models.Tables.Entities
+namespace Bakery.Models.Tables
 {
     public class OutsideTable : Table
     {

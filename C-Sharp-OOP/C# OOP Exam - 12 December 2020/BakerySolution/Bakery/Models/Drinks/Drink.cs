@@ -2,7 +2,7 @@
 using Bakery.Utilities.Messages;
 using System;
 
-namespace Bakery.Models.Drinks.Entities
+namespace Bakery.Models.Drinks
 {
     public abstract class Drink : IDrink
     {

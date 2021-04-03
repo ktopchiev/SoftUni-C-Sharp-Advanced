@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bakery.Models.Drinks.Entities
+namespace Bakery.Models.Drinks
 {
     public class Tea : Drink
     {

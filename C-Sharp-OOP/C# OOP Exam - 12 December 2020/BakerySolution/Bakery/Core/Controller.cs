@@ -1,15 +1,15 @@
 ﻿using Bakery.Core.Contracts;
 using Bakery.Models.BakedFoods.Contracts;
-using Bakery.Models.BakedFoods.Entities;
-using Bakery.Models.Drinks.Contracts;
-using Bakery.Models.Drinks.Entities;
+using Bakery.Models.BakedFoods;
+using Bakery.Models.Drinks;
 using Bakery.Models.Tables.Contracts;
-using Bakery.Models.Tables.Entities;
+using Bakery.Models.Tables;
 using Bakery.Utilities.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Bakery.Models.Drinks.Contracts;
 
 namespace Bakery.Core
 {
@@ -18,14 +18,13 @@ namespace Bakery.Core
         private readonly List<IBakedFood> bakedFoods;
         private readonly List<IDrink> drinks;
         private readonly List<ITable> tables;
-        private decimal totalIncome;
+        private decimal totalIncome = 0;
 
         public Controller()
         {
             bakedFoods = new List<IBakedFood>();
             drinks = new List<IDrink>();
             tables = new List<ITable>();
-            totalIncome = 0;
         }
 
         public string AddDrink(string type, string name, int portion, string brand)
@@ -91,6 +90,7 @@ namespace Bakery.Core
         public string GetFreeTablesInfo()
         {
             List<ITable> freeTables = tables.Where(t => t.IsReserved == false).ToList();
+
             StringBuilder sb = new StringBuilder();
 
             foreach (var table in freeTables)
@@ -98,7 +98,7 @@ namespace Bakery.Core
                 sb.AppendLine(table.GetFreeTableInfo());
             }
 
-            return sb.ToString().TrimEnd();
+            return sb.ToString().Trim();
         }
 
         public string GetTotalIncome()
@@ -131,14 +131,14 @@ namespace Bakery.Core
             var drink = drinks.FirstOrDefault(f => f.Name == drinkName);
             var table = tables.FirstOrDefault(t => t.TableNumber == tableNumber);
 
-            if (drink == null)
-            {
-                return String.Format(OutputMessages.NonExistentDrink, drinkName, drinkBrand);
-            }
-
             if (table == null)
             {
                 return String.Format(OutputMessages.WrongTableNumber, tableNumber);
+            }
+
+            if (drink == null)
+            {
+                return String.Format(OutputMessages.NonExistentDrink, drinkName, drinkBrand);
             }
 
             table.OrderDrink(drink);
@@ -151,14 +151,14 @@ namespace Bakery.Core
             var food = bakedFoods.FirstOrDefault(f => f.Name == foodName);
             var table = tables.FirstOrDefault(t => t.TableNumber == tableNumber);
 
-            if (food == null)
-            {
-                return String.Format(OutputMessages.NonExistentFood, foodName);
-            }
-
             if (table == null)
             {
                 return String.Format(OutputMessages.WrongTableNumber, tableNumber);
+            }
+
+            if (food == null)
+            {
+                return String.Format(OutputMessages.NonExistentFood, foodName);
             }
 
             table.OrderFood(food);

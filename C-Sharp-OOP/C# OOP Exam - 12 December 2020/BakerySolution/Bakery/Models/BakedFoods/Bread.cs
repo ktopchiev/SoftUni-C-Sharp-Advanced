@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bakery.Models.BakedFoods.Entities
+namespace Bakery.Models.BakedFoods
 {
-    public class Bread : BakedFood
+    public class Bread : Food
     {
         private const int InitialBreadPortion = 200;
 

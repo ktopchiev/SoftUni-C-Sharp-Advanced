@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Bakery.Models.Tables.Entities
+namespace Bakery.Models.Tables
 {
     public abstract class Table : ITable
     {
