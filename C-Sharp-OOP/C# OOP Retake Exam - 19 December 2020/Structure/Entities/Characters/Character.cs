@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 using WarCroft.Constants;
 using WarCroft.Entities.Inventory;
 using WarCroft.Entities.Items;
@@ -34,6 +34,8 @@ namespace WarCroft.Entities.Characters.Contracts
                 {
                     throw new ArgumentException(ExceptionMessages.CharacterNameInvalid);
                 }
+
+                name = value;
             }
         }
 
@@ -91,18 +93,28 @@ namespace WarCroft.Entities.Characters.Contracts
             {
                 EnsureAlive();
 
-                var armor = Armor -= hitPoints;
+                var armor = Armor;
+                armor -= hitPoints;
 
                 if (armor <= 0)
                 {
                     Armor = 0;
-                    var health = Health += armor;
+                    var health = Health;
+                    health += armor;
 
                     if (health <= 0)
                     {
                         IsAlive = false;
                         Health = 0;
                     }
+                    else
+                    {
+                        Health += armor;
+                    }
+                }
+                else
+                {
+                    Armor -= hitPoints;
                 }
             }
             catch (Exception e)
@@ -115,34 +127,13 @@ namespace WarCroft.Entities.Characters.Contracts
 
         public void UseItem(Item item)
         {
-            try
-            {
-                EnsureAlive();
+            EnsureAlive();
 
-                var health = Health;
+            string name = item != null ? item.GetType().Name : "";
 
-                if (item is HealthPotion)
-                {
-                    health += 20;
-                    if (health > BaseHealth)
-                    {
-                        Health = BaseHealth;
-                    }
-                    else
-                    {
-                        Health = health;
-                    }
-                }
-                else if (item is FirePotion)
-                {
-                    TakeDamage(20);
-                }
-            }
-            catch (Exception e)
-            {
+            var getItem = Bag.GetItem(name);
 
-                throw e;
-            }
+            getItem.AffectCharacter(this);
         } 
     }
 }

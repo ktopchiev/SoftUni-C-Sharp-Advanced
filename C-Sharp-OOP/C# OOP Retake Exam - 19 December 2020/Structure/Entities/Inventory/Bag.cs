@@ -41,12 +41,16 @@ namespace WarCroft.Entities.Inventory
                 throw new InvalidOperationException(ExceptionMessages.EmptyBag);
             }
 
-            if (!items.Exists(item => item.GetType().Name == name))
+            var item = items.FirstOrDefault(item => item.GetType().Name == name);
+
+            if (item == null)
             {
                 throw new ArgumentException(String.Format(ExceptionMessages.ItemNotFoundInBag, name));
             }
 
-            return items.FirstOrDefault(item => item.GetType().Name == name);
+            items.Remove(item);
+
+            return item;
         }
     }
 }
