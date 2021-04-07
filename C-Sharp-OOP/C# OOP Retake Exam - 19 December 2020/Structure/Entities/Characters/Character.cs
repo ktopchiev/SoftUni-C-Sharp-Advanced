@@ -89,40 +89,32 @@ namespace WarCroft.Entities.Characters.Contracts
 
         public void TakeDamage(double hitPoints)
         {
-            try
+            
+            EnsureAlive();
+
+            var armor = Armor;
+            armor -= hitPoints;
+
+            if (armor <= 0)
             {
-                EnsureAlive();
+                Armor = 0;
+                var health = Health;
+                health += armor;
 
-                var armor = Armor;
-                armor -= hitPoints;
-
-                if (armor <= 0)
+                if (health <= 0)
                 {
-                    Armor = 0;
-                    var health = Health;
-                    health += armor;
-
-                    if (health <= 0)
-                    {
-                        IsAlive = false;
-                        Health = 0;
-                    }
-                    else
-                    {
-                        Health += armor;
-                    }
+                    IsAlive = false;
+                    Health = 0;
                 }
                 else
                 {
-                    Armor -= hitPoints;
+                    Health += armor;
                 }
             }
-            catch (Exception e)
+            else
             {
-                throw e;
+                Armor -= hitPoints;
             }
-
-            
         }
 
         public void UseItem(Item item)

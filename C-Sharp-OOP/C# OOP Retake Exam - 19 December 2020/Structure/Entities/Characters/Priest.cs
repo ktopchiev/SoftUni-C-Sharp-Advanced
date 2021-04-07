@@ -6,6 +6,7 @@ namespace WarCroft.Entities.Characters
 {
     public class Priest : Character, IHealer
     {
+        //name,health,armor,abilityPoints,bag
         public Priest(string name)
             : base(name, 50, 25, 40, new Backpack())
         {
@@ -20,7 +21,7 @@ namespace WarCroft.Entities.Characters
             {
                 character.Health += AbilityPoints;
             }
-            
+
         }
     }
 }
