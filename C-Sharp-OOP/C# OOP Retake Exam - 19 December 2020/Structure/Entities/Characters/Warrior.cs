@@ -17,22 +17,14 @@ namespace WarCroft.Entities.Characters
 
         public void Attack(Character character)
         {
-            try
+            EnsureAlive();
+
+            if (character == this)
             {
-                EnsureAlive();
-
-                if (character == this)
-                {
-                    throw new InvalidOperationException(ExceptionMessages.CharacterAttacksSelf);
-                }
-
-                character.TakeDamage(AbilityPoints);
+                throw new InvalidOperationException(ExceptionMessages.CharacterAttacksSelf);
             }
-            catch (Exception)
-            {
 
-                throw;
-            }
+            character.TakeDamage(AbilityPoints);
         }
     }
 }

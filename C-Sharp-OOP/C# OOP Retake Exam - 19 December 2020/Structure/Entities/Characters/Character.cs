@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using WarCroft.Constants;
 using WarCroft.Entities.Inventory;
 using WarCroft.Entities.Items;
@@ -49,12 +48,10 @@ namespace WarCroft.Entities.Characters.Contracts
 
             set
             {
-                if (value < 0 || value > BaseHealth)
+                if (value > 0 || value <= BaseHealth)
                 {
-                    throw new ArgumentException(String.Format(ExceptionMessages.CharacterHealthInvalid, BaseHealth));
+                    health = value;
                 }
-
-                health = value;
             }
         }
 
@@ -64,12 +61,10 @@ namespace WarCroft.Entities.Characters.Contracts
 
             set
             {
-                if (value < 0 || value > BaseArmor)
+                if (value > 0 || value <= BaseArmor)
                 {
-                    throw new ArgumentException(String.Format(ExceptionMessages.CharacterArmorInvalid, BaseArmor));
+                    armor = value;
                 }
-
-                armor = value;
             }
         }
 
@@ -81,7 +76,7 @@ namespace WarCroft.Entities.Characters.Contracts
 
         protected void EnsureAlive()
         {
-            if (!this.IsAlive)
+            if (!IsAlive)
             {
                 throw new InvalidOperationException(ExceptionMessages.AffectedCharacterDead);
             }
@@ -89,31 +84,25 @@ namespace WarCroft.Entities.Characters.Contracts
 
         public void TakeDamage(double hitPoints)
         {
-            
             EnsureAlive();
 
-            var armor = Armor;
-            armor -= hitPoints;
-
-            if (armor <= 0)
+            if (armor >= hitPoints)
             {
-                Armor = 0;
-                var health = Health;
-                health += armor;
-
-                if (health <= 0)
+                armor -= hitPoints;
+            }
+            else if (armor < hitPoints)
+            {
+                hitPoints -= armor;
+                armor = 0;
+                if (health > hitPoints)
                 {
-                    IsAlive = false;
-                    Health = 0;
+                    health -= hitPoints;
                 }
                 else
                 {
-                    Health += armor;
+                    health = 0;
+                    IsAlive = false;
                 }
-            }
-            else
-            {
-                Armor -= hitPoints;
             }
         }
 
@@ -121,11 +110,7 @@ namespace WarCroft.Entities.Characters.Contracts
         {
             EnsureAlive();
 
-            string name = item != null ? item.GetType().Name : "";
-
-            var getItem = Bag.GetItem(name);
-
-            getItem.AffectCharacter(this);
+            item.AffectCharacter(this);
         } 
     }
 }

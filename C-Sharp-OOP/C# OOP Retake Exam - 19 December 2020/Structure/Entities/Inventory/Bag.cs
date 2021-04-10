@@ -11,6 +11,7 @@ namespace WarCroft.Entities.Inventory
     {
         private int capacity;
         private readonly List<Item> items;
+        private const int defaultValueOfCapacity = 100;
 
         public Bag(int capacity = 100)
         {
@@ -18,11 +19,22 @@ namespace WarCroft.Entities.Inventory
             items = new List<Item>();
         }
 
-        public int Capacity { get => capacity; set => capacity = value; }
+        public int Capacity
+        {
+            get => this.capacity;
+            set
+            {
+                if (value < 0 || value > defaultValueOfCapacity)
+                {
+                    this.capacity = defaultValueOfCapacity;
+                }
+                this.capacity = value;
+            }
+        }
 
         public int Load => items.Sum(item => item.Weight);
 
-        public IReadOnlyCollection<Item> Items => items.AsReadOnly();
+        public IReadOnlyCollection<Item> Items => items.ToList().AsReadOnly();
 
         public void AddItem(Item item)
         {

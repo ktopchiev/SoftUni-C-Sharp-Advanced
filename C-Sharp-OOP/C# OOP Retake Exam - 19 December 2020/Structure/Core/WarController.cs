@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using WarCroft.Constants;
 using WarCroft.Entities.Characters;
@@ -94,8 +93,8 @@ namespace WarCroft.Core
             }
 
             var lastItemInPool = itemPool.Last();
-            itemPool.Remove(lastItemInPool);
             character.Bag.AddItem(lastItemInPool);
+            itemPool.Remove(lastItemInPool);
 
             return String.Format(SuccessMessages.PickUpItem, characterName, lastItemInPool.GetType().Name);
         }
@@ -112,19 +111,7 @@ namespace WarCroft.Core
                 throw new ArgumentException(String.Format(ExceptionMessages.CharacterNotInParty, characterName));
             }
 
-            Item item = null;
-
-            switch (itemName)
-            {
-                case "FirePotion":
-                    item = new FirePotion();
-                    break;
-                case "HealthPotion":
-                    item = new HealthPotion();
-                    break;
-                default:
-                    break;
-            }
+            var item = character.Bag.GetItem(itemName);
 
             character.UseItem(item);
 
@@ -151,10 +138,10 @@ namespace WarCroft.Core
                 }
 
                 charactersForPrint.
-                    AppendLine($"{character.Name} - " +
-                    $"HP: {character.Health}/{character.BaseHealth}, " +
-                    $"AP: {character.Armor}/{character.BaseArmor}," +
-                    $" Status: {status}");
+                    AppendLine(String.Format(SuccessMessages.CharacterStats,
+                    character.Name, character.Health,
+                    character.BaseHealth, character.Armor,
+                    character.BaseArmor, status));
             }
 
             return charactersForPrint.ToString().TrimEnd();
@@ -194,7 +181,7 @@ namespace WarCroft.Core
 
             if (!receiver.IsAlive)
             {
-                attackResultPrint.AppendLine($"{receiverName} is dead!");
+                attackResultPrint.AppendLine(String.Format(SuccessMessages.AttackKillsCharacter, receiverName));
             }
 
             return attackResultPrint.ToString().TrimEnd();
