@@ -8,6 +8,17 @@ namespace WildFarm
     {
         static void Main(string[] args)
         {
+            List<int> numbers = new List<int>();
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            
+            
+
+            Console.WriteLine(String.Join(" ", numbers));
+
+            return;
 
             List<Animal> animals = new List<Animal>();
 

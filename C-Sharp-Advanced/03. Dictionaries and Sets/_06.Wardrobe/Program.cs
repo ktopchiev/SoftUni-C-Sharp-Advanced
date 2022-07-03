@@ -28,13 +28,13 @@ namespace _06.Wardrobe
         {
             int n = int.Parse(Console.ReadLine());
 
-            Dictionary<string, Dictionary<string, int>> wardrobe =
-                new Dictionary<string, Dictionary<string, int>>();
+            Dictionary<string, Dictionary<string, int>> wardrobe = new Dictionary<string, Dictionary<string, int>>();
 
             for (int i = 0; i < n; i++)
             {
-                List<string> clothesRange = Console.ReadLine().Split(new string[]{",", " -> "}, 
-                StringSplitOptions.RemoveEmptyEntries).ToList();
+                List<string> clothesRange = Console.ReadLine()
+                    .Split(new string[] { ",", " -> " }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
 
                 string color = clothesRange[0];
                 clothesRange.Remove(color);
@@ -48,11 +48,11 @@ namespace _06.Wardrobe
                     AddNewColor(wardrobe, color, clothesRange);
                 }
             }
-            
+
             string[] searchInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             string colorForSearch = String.Empty;
             string dressForSearch = String.Empty;
-            
+
             if (searchInput.Length > 2)
             {
                 colorForSearch = $"{searchInput[0]} {searchInput[1]}";
@@ -60,17 +60,16 @@ namespace _06.Wardrobe
             }
             else
             {
-                 colorForSearch = searchInput[0];
-                 dressForSearch = searchInput[1];   
+                colorForSearch = searchInput[0];
+                dressForSearch = searchInput[1];
             }
 
             PrintWardrobeContent(wardrobe, colorForSearch, dressForSearch);
         }
 
-        private static void EditColor(Dictionary<string, Dictionary<string, int>> wardrobe,string 
-        color, List<string> clothesRange)
+        private static void EditColor(Dictionary<string, Dictionary<string, int>> wardrobe, string color, List<string> clothesRange)
         {
-            
+
             var dressData = wardrobe[color];
 
             for (int j = 0; j < clothesRange.Count; j++)
@@ -85,35 +84,33 @@ namespace _06.Wardrobe
                 }
             }
         }
-        
-        private static void AddNewColor(Dictionary<string, Dictionary<string, int>> wardrobe, string 
-        color, List<string> clothesRange)
+
+        private static void AddNewColor(Dictionary<string, Dictionary<string, int>> wardrobe, string color, List<string> clothesRange)
         {
             wardrobe.Add(color, new Dictionary<string, int>());
-                    
+
             var dressDict = wardrobe[color];
 
             for (int j = 0; j < clothesRange.Count; j++)
             {
                 var currentCloth = clothesRange[j];
-                
+
                 if (dressDict.ContainsKey(currentCloth))
                 {
                     dressDict[currentCloth]++;
                     continue;
                 }
-                
+
                 dressDict.Add(currentCloth, 1);
             }
         }
 
-        private static void PrintWardrobeContent(Dictionary<string, Dictionary<string, int>> 
-        wardrobe, string colorForSearch, string dressForSearch)
+        private static void PrintWardrobeContent(Dictionary<string, Dictionary<string, int>> wardrobe, string colorForSearch, string dressForSearch)
         {
             foreach (var color in wardrobe)
             {
                 Console.WriteLine($"{color.Key} clothes:");
-                
+
                 foreach (var dress in color.Value)
                 {
                     if (dress.Key == dressForSearch && color.Key == colorForSearch)
